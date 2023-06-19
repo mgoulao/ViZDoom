@@ -14,8 +14,8 @@
     <link rel="shortcut icon" href="../_static/favicon.png"/><!-- Generated with Sphinx 6.2.1 and Furo 2022.12.07.dev1 -->
         <title>Release Notes - ViZDoom Documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=721f65a87c37740baa8d605b09db5bec3a2987a8" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=4297ed78bc2370ec4493f1a6639f04addebc5da5" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=cfd2cc3354364f303ef4a892d279bfffada5835d" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=6342a809aabeb35cfac296000cfa245808bc1d78" />
     
     
 
@@ -203,7 +203,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -293,7 +293,7 @@
                 </svg>
               </button>
             </div>
-            <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <label class="toc-overlay-icon toc-content-icon" for="__toc">
               <div class="visually-hidden">Toggle table of contents sidebar</div>
               <i class="icon"><svg>
                   <use href="#svg-toc"></use>
@@ -304,10 +304,397 @@
             
             <section id="release-notes">
 <h1>Release Notes<a class="headerlink" href="#release-notes" title="Permalink to this heading">#</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Changelog was not built because <code class="docutils literal notranslate"><span class="pre">sphinx_github_changelog_token</span></code> parameter is missing in the documentation configuration.</p>
-</div>
+<section id="release-1-2-0">
+<h2>ViZDoom 1.2.0: add Gymnasium wrapper, Pickle support, and ARM compatibility<a class="headerlink" href="#release-1-2-0" title="Permalink to this heading">#</a></h2>
+<p><em>Released on 2023-05-12 - <a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/releases/tag/1.2.0">GitHub</a> - <a class="reference external" href="https://pypi.org/project/vizdoom/1.2.0/">PyPI</a></em></p>
+<h1>ViZDoom 1.2.0 Release Notes</h1>
+<p>This release adds official Gymnasium support, support for serialization using Pickle, and ARM compatibility. Besides that, it improves and modernizes the codebase to simply further maintenance of the library.</p>
+<p><strong>ViZDoom core API and Gym wrapper remain unchanged in this release. The code using the 1.1.X version should be fully compatible with this release.</strong></p>
+<h2>New Features and Improvements:</h2>
+<ul>
+<li><strong>Added Gymnasium support.</strong> The wrapper for Gymnasium 0.28 was added, and from now on it will be an integral part of the library. The old Gym 0.26 wrapper remains as an optional extra. Because of that, we mark this release as the next minor release for the first time in 4 years.</li>
+<li><strong>Added  Pickle support.</strong>
+<ul>
+<li>The Gymnasium/Gym wrappers now support the serialization of environments via pickle. Now both the environments and their states can be serialized.</li>
+<li>The <code>GameState</code> object and its subobjects, which are returned from C++ by <code>DoomGame.get_state()</code> method in core Python API, now also support serialization. However, <code>DoomGame</code> object that wraps the game engine cannot be serialized.</li>
+</ul>
+</li>
+<li><strong>Compatibility with ARM.</strong> The library can now be easily compiled and installed on ARM Linux as well as on Apple Silicon.</li>
+<li><strong>Python 3.11 support.</strong> The ViZDoom library can now be installed with Python 3.11.</li>
+</ul>
+<h2>Environments:</h2>
+<p>The default configurations for all build-in scenarios/environments were unified to use 320x240 resolution (original DOS Doom resolution) as default.</p>
+<h2>Bug Fixes and Documentation Updates:</h2>
+<p>This release introduces numerous improvements to the codebase that will simplify further maintenance:</p>
+<ul>
+<li>Pre-commit-hooks with code formatting and checks were added.</li>
+<li>All assembler code was removed. Instead, the C/C++ code that was present in the engine as a fallback is now used instead. Currently, these assembler parts are not bringing significant performance improvements and thus were not worth keeping in our opinion. Because of that, the assembler compiler was removed from the list of dependencies as it's no longer needed.</li>
+<li>Lemon and Zipdir libraries were updated to the newer versions to fix issues with a building project on ARM machines and some Windows configurations.</li>
+<li>Fixed some deprecation warnings in the C/C++ codebase.</li>
+<li>Updated and cleaned-up documentation related to the project building.</li>
+<li>Added a long description for the PyPI package page.</li>
+<li>Added many tests for both core API and the Gymnasium wrapper.</li>
+<li>Cleaned up the codebase and removed unused files, scripts, commented code blocks, and Visual Studio project files.</li>
+</ul>
+<p><strong>Full Changelog</strong>: <a class="commit-link" href="https://github.com/Farama-Foundation/ViZDoom/compare/1.1.14...1.2.0"><tt>1.1.14...1.2.0</tt></a></p></section>
+<section id="release-1-1-14">
+<h2>1.1.14<a class="headerlink" href="#release-1-1-14" title="Permalink to this heading">#</a></h2>
+<p><em>Released on 2023-01-07 - <a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/releases/tag/1.1.14">GitHub</a> - <a class="reference external" href="https://pypi.org/project/vizdoom/1.1.14/">PyPI</a></em></p>
+<h2>Changes in ViZDoom 1.1.14</h2>
+<h4>Support for Apple Silicon</h4>
+<ul>
+<li>Fixed building on Apple Silicon Macbooks.</li>
+</ul>
+<h4>Gym</h4>
+<ul>
+<li>OpenAI Gym environment wrappers were updated to the Gym v0.26 API version.</li>
+</ul></section>
+<section id="release-1-1-13">
+<h2>1.1.13<a class="headerlink" href="#release-1-1-13" title="Permalink to this heading">#</a></h2>
+<p><em>Released on 2022-04-18 - <a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/releases/tag/1.1.13">GitHub</a> - <a class="reference external" href="https://pypi.org/project/vizdoom/1.1.13/">PyPI</a></em></p>
+<h2>Changes in ViZDoom 1.1.13</h2>
+<h4>Releases</h4>
+<ul>
+<li>The pybind11 library and freedoom2.wad are now part of the source release instead of being downloaded during building.</li>
+</ul>
+<h4>Consts</h4>
+<ul>
+<li>Added new consts: <code>DEFAULT_FPS</code> (= <code>DEFAULT_TICRATE</code>), <code>DEFAULT_FRAMETIME_S</code> (= <code>1.0 / DEFAULT_TICRATE</code>), <code>DEFAULT_FRAMETIME_MS</code> (= <code>DEFAULT_FRAMETIME_S * 1000</code>);</li>
+</ul></section>
+<section id="release-1-1-12">
+<h2>1.1.12<a class="headerlink" href="#release-1-1-12" title="Permalink to this heading">#</a></h2>
+<p><em>Released on 2022-04-01 - <a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/releases/tag/1.1.12">GitHub</a> - <a class="reference external" href="https://pypi.org/project/vizdoom/1.1.12/">PyPI</a></em></p>
+<h2>Changes in ViZDoom 1.1.12</h2>
+<h4>New OpenAI Gym wrapper</h4>
+<ul>
+<li>Added a new wrapper for OpenAI Gym.</li>
+</ul></section>
+<section id="release-1-1-11">
+<h2>1.1.11<a class="headerlink" href="#release-1-1-11" title="Permalink to this heading">#</a></h2>
+<p><em>Released on 2021-11-22 - <a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/releases/tag/1.1.11">GitHub</a> - <a class="reference external" href="https://pypi.org/project/vizdoom/1.1.11/">PyPI</a></em></p>
+<h2>Changes in ViZDoom 1.1.11</h2>
+<h4>Python</h4>
+<ul>
+<li>Fixed issues with installing/building Python package.</li>
+</ul></section>
+<section id="release-1-1-10">
+<h2>1.1.10<a class="headerlink" href="#release-1-1-10" title="Permalink to this heading">#</a></h2>
+<p><em>Released on 2021-11-10 - <a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/releases/tag/1.1.10">GitHub</a> - <a class="reference external" href="https://pypi.org/project/vizdoom/1.1.10/">PyPI</a></em></p>
+<h2>Changes in ViZDoom 1.1.10</h2>
+<h4>Python Bindings</h4>
+<ul>
+<li>Fixed support for Python 3.10</li>
+<li>Removed dependency on Numpy and simplified the process of building Windows wheels.</li>
+</ul>
+<h4>Input/output</h4>
+<ul>
+<li>Added support for tuples and ndarrays as arguments in many functions, where previously only lists were accepted.</li>
+</ul></section>
+<section id="release-1-1-9">
+<h2>1.1.9<a class="headerlink" href="#release-1-1-9" title="Permalink to this heading">#</a></h2>
+<p><em>Released on 2021-09-30 - <a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/releases/tag/1.1.9">GitHub</a> - <a class="reference external" href="https://pypi.org/project/vizdoom/1.1.9/">PyPI</a></em></p>
+<h2>Changes in ViZDoom 1.1.9</h2>
+<h4>Audio buffer</h4>
+<ul>
+<li>Added <code>audio_buffer</code> to <code>State</code> and related methods <code>is/setAudioBufferEnabled</code>, <code>get/setAudioSamplingRate</code>, <code>get/setAudioBufferSize</code>.</li>
+</ul>
+<h4>Save/load methods</h4>
+<ul>
+<li>Added <code>save</code> and <code>load</code> methods that allow saving/loading game to/from a file.</li>
+</ul>
+<h4>Misc</h4>
+<ul>
+<li>Added <code>viz_bots_path</code> CVAR that allows specifying path to custom bots configuration.</li>
+</ul></section>
+<section id="release-1-1-8">
+<h2>1.1.8<a class="headerlink" href="#release-1-1-8" title="Permalink to this heading">#</a></h2>
+<p><em>Released on 2020-10-29 - <a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/releases/tag/1.1.8">GitHub</a> - <a class="reference external" href="https://pypi.org/project/vizdoom/1.1.8/">PyPI</a></em></p>
+<h2>Changes in ViZDoom 1.1.8</h2>
+<h4>Objects and sectors</h4>
+<ul>
+<li>Added <code>is/setObjectsInfoEnabled</code>, <code>is/setSectorsInfoEnabled</code> methods to Python and C++ to enable information about all objects or/and sectors (map layout) present in the current episode/level.</li>
+<li>Added <code>objects</code> and <code>sectors</code> fields to <code>GameState</code> in Python and C++.</li>
+</ul>
+<h4>Config files</h4>
+<ul>
+<li>Added missing GameVariables introduced in 1.1.5 to the Config parser.</li>
+<li>Added missing GameVariables introduced in 1.1.7 to the Config parser.</li>
+<li>Added <code>objectsInfoEnabled/objects_info_enabled</code>.</li>
+</ul>
+<h4>Python, Java, Lua</h4>
+<ul>
+<li>Dropped support for Python 2.7</li>
+<li>Dropped support for Java bindings</li>
+<li>Dropped support for Lua/Torch bindings</li>
+</ul></section>
+<section id="release-1-1-8pre">
+<h2>1.1.8pre<a class="headerlink" href="#release-1-1-8pre" title="Permalink to this heading">#</a></h2>
+<p><em>Released on 2019-08-27 - <a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/releases/tag/1.1.8pre">GitHub</a> - <a class="reference external" href="https://pypi.org/project/vizdoom/1.1.8pre/">PyPI</a></em></p>
+</section>
+<section id="release-1-1-7">
+<h2>1.1.7<a class="headerlink" href="#release-1-1-7" title="Permalink to this heading">#</a></h2>
+<p><em>Released on 2018-12-29 - <a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/releases/tag/1.1.7">GitHub</a> - <a class="reference external" href="https://pypi.org/project/vizdoom/1.1.7/">PyPI</a></em></p>
+<h2>Changes in ViZDoom 1.1.7</h2>
+<h4>Python &amp; Julia</h4>
+<ul>
+<li>Added missing <code>is_multiplayer_game</code> method to Python and Julia binding.</li>
+</ul>
+<h4>CVARS</h4>
+<ul>
+<li>Added <code>VIEW_HEIGHT</code>, <code>CAMERA_POSITION_X</code>/<code>Y</code>/<code>Z</code>, <code>CAMERA_ANGLE</code>, <code>CAMERA_PITCH</code>, <code>CAMERA_ROLL</code> and <code>CAMERA_FOV</code> GameVariables.</li>
+</ul></section>
+<section id="release-1-1-6">
+<h2>1.1.6: <a class="headerlink" href="#release-1-1-6" title="Permalink to this heading">#</a></h2>
+<p><em>Released on 2018-07-16 - <a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/releases/tag/1.1.6">GitHub</a> - <a class="reference external" href="https://pypi.org/project/vizdoom/1.1.6/">PyPI</a></em></p>
+<h2>Changes in ViZDoom 1.1.6</h2>
+<h4>Julia specific</h4>
+<ul>
+<li>Julia binding added.</li>
+</ul>
+<h4>Server state</h4>
+<ul>
+<li>Added <code>getServerState</code> method that returns <code>ServerState</code> object.</li>
+</ul>
+<h4>Multiplayer</h4>
+<ul>
+<li>Added timeout for network game synchronization controlled by <code>viz_connect_timeout</code> CVAR.</li>
+<li>Fixed <code>viz_spectator</code> CVAR.</li>
+</ul>
+<h4>Python specific</h4>
+<ul>
+<li>Added Python interpreter version check.</li>
+</ul></section>
+<section id="release-1-1-5">
+<h2>1.1.5<a class="headerlink" href="#release-1-1-5" title="Permalink to this heading">#</a></h2>
+<p><em>Released on 2018-05-14 - <a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/releases/tag/1.1.5">GitHub</a> - <a class="reference external" href="https://pypi.org/project/vizdoom/1.1.5/">PyPI</a></em></p>
+<h2>Changes in ViZDoom 1.1.5</h2>
+<h4>Automap</h4>
+<ul>
+<li>Added <code>viz_am_scale</code> CVAR (CVAR version of <code>am_scale</code> CCMD).</li>
+<li>Added <code>viz_am_center</code> CVAR (and <code>am_center</code> CCMD).</li>
+</ul>
+<h4>Buttons and actions</h4>
+<ul>
+<li><strong>Added <code>getButton</code> method.</strong></li>
+</ul>
+<h4>Episode recording and replaying</h4>
+<ul>
+<li>Added <code>isRecordingEpisode</code> and <code>isReplayingEpisode</code> methods.</li>
+</ul>
+<h4>GameVariables</h4>
+<ul>
+<li><strong><code>KILLCOUNT</code> counts all kills, including multilayer kills.</strong></li>
+<li><strong><code>HITCOUNT</code>, <code>HITS_TAKEN</code>, <code>DAMAGECOUNT</code>, <code>DAMAGE_TAKEN</code> game variables added.</strong></li>
+</ul>
+<h4>Labels</h4>
+<ul>
+<li><strong>Added appending "Dead" prefix to label's name when actor is a corpse.</strong></li>
+<li><strong>Added bounding box information to Label object in <code>x</code>, <code>y</code>, <code>width</code> and <code>height</code> fields.</strong></li>
+<li><strong>Added <code>objectAngle</code>, <code>objectPitch</code>, <code>objectRoll</code>, <code>objectVelocityX/Y/Z</code> fields to Label object.</strong></li>
+</ul>
+<h4>Windows specific</h4>
+<ul>
+<li>Fixed problem with building on Windows 8.1 and 10.</li>
+<li>Added scripts for downloading freedoom2.wad and assembling Python packages.</li>
+</ul>
+<h4>Rendering</h4>
+<ul>
+<li>Fixed minor rendering issues in the depth and labels buffers.</li>
+<li>Fixed order of color values in <code>RGB/BGR</code> modes of <code>ScreenFormat</code>.</li>
+</ul></section>
+<section id="release-1-1-5pre">
+<h2>1.1.5pre<a class="headerlink" href="#release-1-1-5pre" title="Permalink to this heading">#</a></h2>
+<p><em>Released on 2017-10-22 - <a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/releases/tag/1.1.5pre">GitHub</a> - <a class="reference external" href="https://pypi.org/project/vizdoom/1.1.5pre/">PyPI</a></em></p>
+</section>
+<section id="release-1-1-4">
+<h2>1.1.4<a class="headerlink" href="#release-1-1-4" title="Permalink to this heading">#</a></h2>
+<p><em>Released on 2017-09-29 - <a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/releases/tag/1.1.4">GitHub</a> - <a class="reference external" href="https://pypi.org/project/vizdoom/1.1.4/">PyPI</a></em></p>
+<h2>Changes in ViZDoom 1.1.4</h2>
+<h4>Automap</h4>
+<ul>
+<li>Added <code>am_scale</code> CCMD.</li>
+</ul>
+<h4>Scenarios</h4>
+<ul>
+<li>Fixed <code>KILLCOUNT</code> GameVariable for ChainsawMarine in <code>defend_the_center</code> and <code>deathmatch</code> scenarios.</li>
+</ul>
+<h4>Python specific</h4>
+<ul>
+<li><strong>Ported Python binding to pybind11 as a replacement for Boost.Python.</strong></li>
+<li>Fixed problems with <code>pip install</code> detecting Python interpreter, includes and libraries from different Python versions.</li>
+</ul></section>
+<section id="release-1-1-3">
+<h2>1.1.3<a class="headerlink" href="#release-1-1-3" title="Permalink to this heading">#</a></h2>
+<p><em>Released on 2017-07-08 - <a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/releases/tag/1.1.3">GitHub</a> - <a class="reference external" href="https://pypi.org/project/vizdoom/1.1.3/">PyPI</a></em></p>
+<h2>Changes in ViZDoom 1.1.3</h2>
+<h4>Rendering options</h4>
+<ul>
+<li>Added <code>setRenderScreenFlashes</code> and <code>setRenderAllFrames</code> methods.</li>
+<li>Added <code>viz_ignore_render_mode</code> CVAR which disables overriding rendering settings.</li>
+</ul>
+<h4>GameVariables</h4>
+<ul>
+<li><strong>Added <code>ANGLE</code>, <code>PITCH</code>, <code>ROLL</code>, <code>VELOCITY_X</code>/<code>Y</code>/<code>Z</code> GameVariables.</strong></li>
+</ul>
+<h4>Missing config keys</h4>
+<ul>
+<li>Added support for <code>DEATHCOUNT</code>, <code>USER31</code> - <code>USER60</code>, <code>PLAYER_NUMBER</code>, <code>PLAYER_COUNT</code>, <code>PLAYER1_FRAGCOUNT</code> - <code>PLAYER16_FRAGCOUNT</code>, <code>POSITION_X</code>/<code>Y</code>/<code>Z</code> GameVariables in the config file.</li>
+<li>Added support for <code>ALTATTACK</code> Button in the config file.</li>
+</ul>
+<h4>Java specific</h4>
+<ul>
+<li>Fixed <code>makeAction</code>.</li>
+<li>Added missing <code>POSITION_X</code>/<code>Y</code>/<code>Z</code> Game Variables.</li>
+</ul>
+<h4>Python specific</h4>
+<ul>
+<li>Added manual GIL management for better performance when used with Python threads.</li>
+</ul>
+<h4>Windows specific</h4>
+<ul>
+<li>Fixed building for Windows 10.</li>
+</ul></section>
+<section id="release-1-1-2">
+<h2>1.1.2<a class="headerlink" href="#release-1-1-2" title="Permalink to this heading">#</a></h2>
+<p><em>Released on 2017-06-11 - <a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/releases/tag/1.1.2">GitHub</a> - <a class="reference external" href="https://pypi.org/project/vizdoom/1.1.2/">PyPI</a></em></p>
+<h2>Changes in ViZDoom 1.1.2</h2>
+<h4>Multiplayer</h4>
+<ul>
+<li>Added <code>isMultiplayerGame</code> method.</li>
+<li>Added <code>viz_respawn_delay</code> CVAR, which allows controlling the delay between respawns in multiplayer games.</li>
+<li>Added <code>viz_spectator</code> CVAR, which allows connecting to multiplayer games as a spectator.</li>
+<li><strong>Maximum number of connected players raised to 16, <code>PLAYER9_FRAGCOUNT</code> - <code>PLAYER16_FRAGCOUNT</code> GameVariables added.</strong></li>
+</ul>
+<h4>Missing methods</h4>
+<ul>
+<li>Added <code>isRunning</code>, <code>isDepthBufferEnabled</code>, <code>isLabelsBufferEnabled</code> and <code>isAutomapBufferEnabled</code> missing methods to Python and Lua bindings.</li>
+</ul></section>
+<section id="release-1-1-1">
+<h2>1.1.1<a class="headerlink" href="#release-1-1-1" title="Permalink to this heading">#</a></h2>
+<p><em>Released on 2017-03-23 - <a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/releases/tag/1.1.1">GitHub</a> - <a class="reference external" href="https://pypi.org/project/vizdoom/1.1.1/">PyPI</a></em></p>
+<h2>Changes in ViZDoom 1.1.1</h2>
+<h4>GameState</h4>
+<ul>
+<li>Added <code>tic</code> field.</li>
+<li><code>GameVariable.DEATHCOUNT</code> fixed.</li>
+</ul>
+<h4>Lua specific</h4>
+<ul>
+<li>Fixed crash when calling <code>getState</code> in a terminal state.</li>
+</ul>
+<h4>Python specific</h4>
+<ul>
+<li>Fixed minor memory leak</li>
+<li>Fixed crash when calling <code>getState</code> in a terminal state.</li>
+</ul></section>
+<section id="release-1-1-0">
+<h2>1.1.0<a class="headerlink" href="#release-1-1-0" title="Permalink to this heading">#</a></h2>
+<p><em>Released on 2016-12-23 - <a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/releases/tag/1.1.0">GitHub</a> - <a class="reference external" href="https://pypi.org/project/vizdoom/1.1.0/">PyPI</a></em></p>
+<h2>Changes in ViZDoom 1.1.0</h2>
+<h4>Buffers</h4>
+<ul>
+<li>Depth buffer is now a separate buffer in state and <code>ScreenFormat</code> values with it were removed - <code>is/setDepthBufferEnabled</code> added.</li>
+<li>Added in frame actors labeling feature -<code>is/setLabelsBufferEnabled</code> added.</li>
+<li>Added buffer with in game automap - <code>is/setAutomapBufferEnabled</code>, <code>setAutomapMode</code>, <code>setAutomapRoate</code>, <code>setAutomapRenderTextures</code>, <code>AutomapMode</code> enum added.</li>
+</ul>
+<h4>GameState</h4>
+<ul>
+<li><code>getState</code> will now return <code>nullptr/null/None</code> if game is in the terminal state.</li>
+<li><code>imageBuffer</code> renamed to <code>screenBuffer</code>.</li>
+<li>Added <code>depthBuffer</code>, <code>labelsBuffer</code> and <code>automapBuffer</code> and <code>labels</code> fields.</li>
+</ul>
+<h4>Rendering options</h4>
+<ul>
+<li>The option to use minimal hud instead of default full hud - <code>setRenderMinimalHud</code> added.</li>
+<li>The option to enable/disable effects that use sprites - <code>setRenderEffectsSprites</code> added.</li>
+<li>The option to enable/disable in game messages independently of the console output - <code>setRenderMessages</code> added.</li>
+<li>The option to enable/disable corpses - <code>setRenderCorpses</code> added.</li>
+</ul>
+<h4>Episode recording and replaying</h4>
+<ul>
+<li>The option to record and replay episodes, based on adapted ZDoom's demo mechanism -<br>
+recording <code>filePath</code> argument added to <code>newEpisode</code>, <code>replayEpisode</code> added.</li>
+<li>The option to replay demo from other players' perspective.</li>
+</ul>
+<h4>Ticrate</h4>
+<ul>
+<li>The option to set number of tics executed per second in ASNYC Modes.</li>
+<li>New <code>ticrate</code> optional argument in <code>doomTicsToMs</code>, <code>msToDoomTics</code>.</li>
+<li><code>doomTicsToSec</code> and <code>secToDoomTics</code> added.</li>
+</ul>
+<h4>Paths</h4>
+<ul>
+<li><strong>Paths in config files are now relative to config file.</strong></li>
+<li>setting <strong>vizdoom_path</strong> and <strong>doom_game_path</strong> is no longer needed - they default to location(installation) of vizdoom.so.</li>
+</ul>
+<h4>Others</h4>
+<ul>
+<li>ZDoom engine updated to 2.8.1.</li>
+<li><strong>Basic support for multiplayer in PLAYER and SPECTATOR Modes.</strong></li>
+<li>Improved exceptions messages.</li>
+<li>Bugs associated with paths handling were fixed.</li>
+<li>Many minor bugs were fixed.</li>
+<li>Possibility to change scenario wad during runtime (only first map from WAD file).</li>
+<li>Added <code>viz_debug</code> CVAR to control some diagnostic messages.</li>
+</ul>
+<h4>C++ specific</h4>
+<ul>
+<li>A lot of overloaded methods turned into a methods with default arguments.</li>
+<li><code>getState()</code> now returns <code>GameStatePtr (std::shared_ptr&lt;GameState&gt;)</code> instead of <code>GameState</code>.</li>
+<li>Buffers are now copied.</li>
+<li>GameState's buffer has now <code>ImageBufferPtr (std::shared_ptr&lt;ImageBuffer&gt;)</code> type - <code>Buffer (std::vector&lt;uint8_t&gt;)</code>.</li>
+<li>GameState's gameVariables are now vector of doubles instead of ints.</li>
+</ul>
+<h4>Lua specific</h4>
+<ul>
+<li>Lua binding added.</li>
+<li>Support for LuaRocks installation for Linux and MacOS.</li>
+</ul>
+<h4>Java specific</h4>
+<ul>
+<li>GameState buffers type changed to byte[].</li>
+<li>Performance improved.</li>
+<li>Java exceptions handling fixed.</li>
+<li>Few functions fixed.</li>
+</ul>
+<h4>Python specific</h4>
+<ul>
+<li>Consts added to Python.</li>
+<li>Aliases for <code>doom_fixed_to_double</code> - <code>doom_fixed_to_float</code> added.</li>
+<li>Support for pip installation for Linux and MacOS.</li>
+</ul></section>
+<section id="release-1-1-0rc">
+<h2>1.1.0rc<a class="headerlink" href="#release-1-1-0rc" title="Permalink to this heading">#</a></h2>
+<p><em>Released on 2016-11-26 - <a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/releases/tag/1.1.0rc">GitHub</a> - <a class="reference external" href="https://pypi.org/project/vizdoom/1.1.0rc/">PyPI</a></em></p>
+</section>
+<section id="release-1-0-4">
+<h2>1.0.4<a class="headerlink" href="#release-1-0-4" title="Permalink to this heading">#</a></h2>
+<p><em>Released on 2016-06-14 - <a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/releases/tag/1.0.4">GitHub</a> - <a class="reference external" href="https://pypi.org/project/vizdoom/1.0.4/">PyPI</a></em></p>
+</section>
+<section id="release-1-1-0pre-cig2016-warm-up-fixed">
+<h2>1.1.0pre-CIG2016-warm-up-fixed: 1.1.0pre-CIG2016<a class="headerlink" href="#release-1-1-0pre-cig2016-warm-up-fixed" title="Permalink to this heading">#</a></h2>
+<p><em>Released on 2016-06-12 - <a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/releases/tag/1.1.0pre-CIG2016-warm-up-fixed">GitHub</a> - <a class="reference external" href="https://pypi.org/project/vizdoom/1.1.0pre-CIG2016-warm-up-fixed/">PyPI</a></em></p>
+</section>
+<section id="release-1-0-3">
+<h2>1.0.3<a class="headerlink" href="#release-1-0-3" title="Permalink to this heading">#</a></h2>
+<p><em>Released on 2016-05-29 - <a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/releases/tag/1.0.3">GitHub</a> - <a class="reference external" href="https://pypi.org/project/vizdoom/1.0.3/">PyPI</a></em></p>
+</section>
+<section id="release-1-0-2">
+<h2>1.0.2<a class="headerlink" href="#release-1-0-2" title="Permalink to this heading">#</a></h2>
+<p><em>Released on 2016-05-17 - <a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/releases/tag/1.0.2">GitHub</a> - <a class="reference external" href="https://pypi.org/project/vizdoom/1.0.2/">PyPI</a></em></p>
+</section>
+<section id="release-1-0-1">
+<h2>1.0.1<a class="headerlink" href="#release-1-0-1" title="Permalink to this heading">#</a></h2>
+<p><em>Released on 2016-05-08 - <a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/releases/tag/1.0.1">GitHub</a> - <a class="reference external" href="https://pypi.org/project/vizdoom/1.0.1/">PyPI</a></em></p>
+</section>
+<section id="release-1-0-0">
+<h2>1.0.0<a class="headerlink" href="#release-1-0-0" title="Permalink to this heading">#</a></h2>
+<p><em>Released on 2016-04-18 - <a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/releases/tag/1.0.0">GitHub</a> - <a class="reference external" href="https://pypi.org/project/vizdoom/1.0.0/">PyPI</a></em></p>
+</section>
+<section id="release-1-0-0-rc">
+<h2>1.0.0-rc: 1.0.0rc<a class="headerlink" href="#release-1-0-0-rc" title="Permalink to this heading">#</a></h2>
+<p><em>Released on 2016-03-25 - <a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/releases/tag/1.0.0-rc">GitHub</a> - <a class="reference external" href="https://pypi.org/project/vizdoom/1.0.0-rc/">PyPI</a></em></p>
+</section>
 </section>
 
           </article>
@@ -331,15 +718,66 @@
             </div>
             <div class="right-details">
               <div class="icons">
-                
+                <a class="muted-link" href="https://github.com/Farama-Foundation/ViZDoom/"
+                  aria-label="On GitHub">
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z">
+                    </path>
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
           
         </footer>
       </div>
-      <aside class="toc-drawer no-toc">
+      <aside class="toc-drawer">
         
+        
+        <div class="toc-sticky toc-scroll">
+          <div class="toc-title-container">
+            <span class="toc-title">
+              On this page
+            </span>
+          </div>
+          <div class="toc-tree-container">
+            <div class="toc-tree">
+              <ul>
+<li><a class="reference internal" href="#">Release Notes</a><ul>
+<li><a class="reference internal" href="#release-1-2-0">ViZDoom 1.2.0: add Gymnasium wrapper, Pickle support, and ARM compatibility</a></li>
+<li><a class="reference internal" href="#release-1-1-14">1.1.14</a></li>
+<li><a class="reference internal" href="#release-1-1-13">1.1.13</a></li>
+<li><a class="reference internal" href="#release-1-1-12">1.1.12</a></li>
+<li><a class="reference internal" href="#release-1-1-11">1.1.11</a></li>
+<li><a class="reference internal" href="#release-1-1-10">1.1.10</a></li>
+<li><a class="reference internal" href="#release-1-1-9">1.1.9</a></li>
+<li><a class="reference internal" href="#release-1-1-8">1.1.8</a></li>
+<li><a class="reference internal" href="#release-1-1-8pre">1.1.8pre</a></li>
+<li><a class="reference internal" href="#release-1-1-7">1.1.7</a></li>
+<li><a class="reference internal" href="#release-1-1-6">1.1.6: </a></li>
+<li><a class="reference internal" href="#release-1-1-5">1.1.5</a></li>
+<li><a class="reference internal" href="#release-1-1-5pre">1.1.5pre</a></li>
+<li><a class="reference internal" href="#release-1-1-4">1.1.4</a></li>
+<li><a class="reference internal" href="#release-1-1-3">1.1.3</a></li>
+<li><a class="reference internal" href="#release-1-1-2">1.1.2</a></li>
+<li><a class="reference internal" href="#release-1-1-1">1.1.1</a></li>
+<li><a class="reference internal" href="#release-1-1-0">1.1.0</a></li>
+<li><a class="reference internal" href="#release-1-1-0rc">1.1.0rc</a></li>
+<li><a class="reference internal" href="#release-1-0-4">1.0.4</a></li>
+<li><a class="reference internal" href="#release-1-1-0pre-cig2016-warm-up-fixed">1.1.0pre-CIG2016-warm-up-fixed: 1.1.0pre-CIG2016</a></li>
+<li><a class="reference internal" href="#release-1-0-3">1.0.3</a></li>
+<li><a class="reference internal" href="#release-1-0-2">1.0.2</a></li>
+<li><a class="reference internal" href="#release-1-0-1">1.0.1</a></li>
+<li><a class="reference internal" href="#release-1-0-0">1.0.0</a></li>
+<li><a class="reference internal" href="#release-1-0-0-rc">1.0.0-rc: 1.0.0rc</a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+          </div>
+        </div>
         
         
       </aside>
@@ -405,6 +843,7 @@
     <script src="../_static/scripts/furo.js"></script>
     
     <script>
+      // Create menu with Farama projects by using the API at farama.org/api/projects.json
       const createCORSRequest = (method, url) => {
         let xhr = new XMLHttpRequest();
         xhr.responseType = 'json';
@@ -519,8 +958,8 @@
     
     <script>
       const versioningConfig = {
-        githubUser: '',
-        githubRepo: '',
+        githubUser: 'Farama-Foundation',
+        githubRepo: 'ViZDoom',
       };
       fetch('/main/_static/versioning/versioning_menu.html').then(response => {
         if (response.status === 200) {
