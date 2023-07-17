@@ -248,7 +248,7 @@
 <p class="caption" role="heading"><span class="caption-text">Environments</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="environments/default/">Default scenarios/environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="environments/creatingCustom/">Creating a custom enviroment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="environments/creatingCustom/">Creating a custom environment</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Others</span></p>
 <ul>
@@ -343,16 +343,16 @@ Library for developing AI bots that play Doom using visual information.
 <span class="n">env</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>There is also the orginal ViZDoom API:</p>
+<p>There is also the original ViZDoom API:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vizdoom</span> <span class="k">as</span> <span class="nn">vzd</span>
 <span class="n">game</span> <span class="o">=</span> <span class="n">DoomGame</span><span class="p">()</span>
 <span class="n">game</span><span class="o">.</span><span class="n">load_config</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">vzd</span><span class="o">.</span><span class="n">scenarios_path</span><span class="p">,</span> <span class="s2">&quot;deadly_corridor.cfg&quot;</span><span class="p">))</span>
 <span class="n">game</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
-<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>   
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
    <span class="n">state</span> <span class="o">=</span> <span class="n">game</span><span class="o">.</span><span class="n">get_state</span><span class="p">()</span>
    <span class="n">action</span> <span class="o">=</span> <span class="n">policy</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>  <span class="c1"># this is where you would insert your policy</span>
    <span class="n">reward</span> <span class="o">=</span> <span class="n">game</span><span class="o">.</span><span class="n">make_action</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>
-   
+
    <span class="k">if</span> <span class="n">game</span><span class="o">.</span><span class="n">is_episode_finished</span><span class="p">():</span>
       <span class="n">game</span><span class="o">.</span><span class="n">new_episode</span><span class="p">()</span>
 
