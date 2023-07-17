@@ -7,15 +7,15 @@
     <meta property="og:title" content="ViZDoom Documentation" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="" />
-    <meta property="og:url" content="https://vizdoom.farama.org/api/exceptions.html" /><meta property="og:image" content="https://vizdoom.farama.org/_static/img/vizdoom-github.png" /><meta name="twitter:card" content="summary_large_image"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Types" href="../types/" /><link rel="prev" title="Configuration files" href="../configuration/" />
-        <link rel="canonical" href="https://vizdoom.farama.org/api/exceptions.html" />
+    <meta property="og:url" content="https://vizdoom.farama.org/api_cpp/exceptions.html" /><meta property="og:image" content="https://vizdoom.farama.org/_static/img/vizdoom-github.png" /><meta name="twitter:card" content="summary_large_image"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Utilities" href="../utils/" /><link rel="prev" title="Configuration files" href="../configurationFiles/" />
+        <link rel="canonical" href="https://vizdoom.farama.org/api_cpp/exceptions.html" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.png"/><!-- Generated with Sphinx 6.2.1 and Furo 2022.12.07.dev1 -->
+    <link rel="shortcut icon" href="../../_static/favicon.png"/><!-- Generated with Sphinx 7.0.1 and Furo 2023.05.20.dev1 -->
         <title>Exceptions - ViZDoom Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=cfd2cc3354364f303ef4a892d279bfffada5835d" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=6342a809aabeb35cfac296000cfa245808bc1d78" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=a022fd11c0d7e10ac71ac296890386cea7a2fa24" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=093e2efd5a2c7b46ab7c7157e45f5f05a1e0a463" />
     
     
 
@@ -224,22 +224,36 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../introduction/quickstart/">Quickstart</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../introduction/installation/">Installation and building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/pythonQuickstart/">Python quick start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/building/">Building from source</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../introduction/wrappers/">Wrapper</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">API</span></p>
+<p class="caption" role="heading"><span class="caption-text">Python API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api_python/gymnasium/">Gymnasium</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_python/doomGame/">DoomGame</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_python/gameState/">GameState</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_python/enums/">Enums</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_python/utils/">Utils</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">C++ API</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../doomGame/">DoomGame</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../configuration/">Configuration files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gameState/">GameState</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enums/">Enums</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configurationFiles/">Configuration files</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Exceptions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../types/">Types</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../utils/">Utilities</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Environments</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../environments/default/">Default scenarios/environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../environments/creatingCustom/">Creating a custom enviroment</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Others</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../faq/">FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../citation/">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../citation/">How to cite</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Development</span></p>
 <ul>
@@ -271,7 +285,7 @@
             <span>Back to top</span>
           </a>
           <div class="content-icon-container"><div class="edit-this-page">
-  <a class="muted-link" href="https://github.com/Farama-Foundation/ViZDoom/edit/master/docs/api/exceptions.md" title="Edit this page">
+  <a class="muted-link" href="https://github.com/Farama-Foundation/ViZDoom/edit/master/docs/api_cpp/exceptions.md" title="Edit this page">
     <svg aria-hidden="true" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
       <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" />
@@ -304,8 +318,9 @@
             
             <section id="exceptions">
 <h1>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this heading">#</a></h1>
+<p>ViZDoom defines several exceptions that can be thrown by its API:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">FileDoesNotExistException</span></code>  - means that file specified as part of a configuration does not exist.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">FileDoesNotExistException</span></code> - means that file specified as part of a configuration does not exist.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">MessageQueueException/SharedMemoryException</span></code> - means that communication with ViZDoom’s instance failed. Usually, means a problem with permissions or system configuration.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">SignalException</span></code> - means that a signal was cached by ViZDoom’s instance.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ViZDoomErrorException</span></code> - means that an error in the ViZDoom engine occurred.</p></li>
@@ -320,18 +335,18 @@
         <footer>
           
           <div class="related-pages">
-            <a class="next-page" href="../types/">
+            <a class="next-page" href="../utils/">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Types</div>
+                <div class="title">Utilities</div>
               </div>
               <svg class="furo-related-icon">
                 <use href="#svg-arrow-right"></use>
               </svg>
             </a>
-            <a class="prev-page" href="../configuration/">
+            <a class="prev-page" href="../configurationFiles/">
               <svg class="furo-related-icon">
                 <use href="#svg-arrow-right"></use>
               </svg>

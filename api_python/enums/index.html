@@ -7,15 +7,15 @@
     <meta property="og:title" content="ViZDoom Documentation" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="" />
-    <meta property="og:url" content="https://vizdoom.farama.org/introduction/quickstart.html" /><meta property="og:image" content="https://vizdoom.farama.org/_static/img/vizdoom-github.png" /><meta name="twitter:card" content="summary_large_image"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Installation and building" href="../installation/" /><link rel="prev" title="ViZDoom allows developing AI bots that play Doom using only the visual information." href="../../" />
-        <link rel="canonical" href="https://vizdoom.farama.org/introduction/quickstart.html" />
+    <meta property="og:url" content="https://vizdoom.farama.org/api_python/enums.html" /><meta property="og:image" content="https://vizdoom.farama.org/_static/img/vizdoom-github.png" /><meta name="twitter:card" content="summary_large_image"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Utils" href="../utils/" /><link rel="prev" title="GameState" href="../gameState/" />
+        <link rel="canonical" href="https://vizdoom.farama.org/api_python/enums.html" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.png"/><!-- Generated with Sphinx 6.2.1 and Furo 2022.12.07.dev1 -->
-        <title>Quickstart - ViZDoom Documentation</title>
+    <link rel="shortcut icon" href="../../_static/favicon.png"/><!-- Generated with Sphinx 7.0.1 and Furo 2023.05.20.dev1 -->
+        <title>Enums - ViZDoom Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=cfd2cc3354364f303ef4a892d279bfffada5835d" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=6342a809aabeb35cfac296000cfa245808bc1d78" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=a022fd11c0d7e10ac71ac296890386cea7a2fa24" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=093e2efd5a2c7b46ab7c7157e45f5f05a1e0a463" />
     
     
 
@@ -203,7 +203,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -223,23 +223,37 @@
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
-<ul class="current">
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Quickstart</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../installation/">Installation and building</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../wrappers/">Wrapper</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">API</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../api/doomGame/">DoomGame</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../api/configuration/">Configuration files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../api/exceptions/">Exceptions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../api/types/">Types</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../api/utils/">Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/pythonQuickstart/">Python quick start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/building/">Building from source</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/wrappers/">Wrapper</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python API</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../gymnasium/">Gymnasium</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doomGame/">DoomGame</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gameState/">GameState</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Enums</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../utils/">Utils</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">C++ API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api_cpp/doomGame/">DoomGame</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_cpp/gameState/">GameState</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_cpp/enums/">Enums</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_cpp/configurationFiles/">Configuration files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_cpp/exceptions/">Exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_cpp/utils/">Utilities</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Environments</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../environments/default/">Default scenarios/environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../environments/creatingCustom/">Creating a custom enviroment</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Others</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../faq/">FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../citation/">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../citation/">How to cite</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Development</span></p>
 <ul>
@@ -271,7 +285,7 @@
             <span>Back to top</span>
           </a>
           <div class="content-icon-container"><div class="edit-this-page">
-  <a class="muted-link" href="https://github.com/Farama-Foundation/ViZDoom/edit/master/docs/introduction/quickstart.md" title="Edit this page">
+  <a class="muted-link" href="https://github.com/Farama-Foundation/ViZDoom/edit/master/docs/api_python/enums.md" title="Edit this page">
     <svg aria-hidden="true" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
       <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" />
@@ -293,7 +307,7 @@
                 </svg>
               </button>
             </div>
-            <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
               <div class="visually-hidden">Toggle table of contents sidebar</div>
               <i class="icon"><svg>
                   <use href="#svg-toc"></use>
@@ -302,78 +316,9 @@
           </div>
           <article role="main">
             
-            <section id="quickstart">
-<h1>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this heading">#</a></h1>
-<blockquote>
-<div><p>This guide can be a little bit outdated.</p>
-</div></blockquote>
-<ul class="simple">
-<li><p><a class="reference internal" href="#"><span class="doc std std-doc">Quickstart</span></a></p>
-<ul>
-<li><p><a class="reference internal" href="#-quickstart-for-macos-and-anaconda3-python-36"><span class="xref myst"> Quickstart for MacOS and Anaconda3 (Python 3.6)</span></a></p></li>
-</ul>
-</li>
-</ul>
-<p>TODO:</p>
-<ul class="simple">
-<li><p>Quickstart for Ubuntu</p></li>
-<li><p>Quickstart for Windows</p></li>
-<li><p>Change “Quickstart for MacOS” to use PyPI</p></li>
-</ul>
-<section id="quickstart-for-macos-and-anaconda3-python-3-6">
-<h2><a name="quickstart_macos_anaconda"></a> Quickstart for MacOS and Anaconda3 (Python 3.6)<a class="headerlink" href="#quickstart-for-macos-and-anaconda3-python-3-6" title="Permalink to this heading">#</a></h2>
-<p>Install <a class="reference external" href="https://brew.sh/">homebrew</a>, and <a class="reference external" href="https://www.continuum.io/downloads">Anaconda3</a> (Python 3.6).</p>
-<ol class="arabic simple">
-<li><p>Install dependencies</p></li>
-</ol>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>brew<span class="w"> </span>install<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>cmake<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>boost<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>boost-python<span class="w"> </span>--with-python3
-</pre></div>
-</div>
-<ol class="arabic simple" start="2">
-<li><p>Clone the repository</p></li>
-</ol>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mwydmuch/ViZDoom
-<span class="nb">cd</span><span class="w"> </span>ViZDoom
-</pre></div>
-</div>
-<ol class="arabic simple" start="3">
-<li><p>Run cmake against anaconda and native boost libraries.</p></li>
-</ol>
-<p>The library version numbers will change over time (e.g. <code class="docutils literal notranslate"><span class="pre">python3.6m</span></code>, <code class="docutils literal notranslate"><span class="pre">boost-python/1.64.0</span></code>) and may need to be updated.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>build
-<span class="nb">cd</span><span class="w"> </span>build
-cmake<span class="w"> </span>..<span class="w"> </span>-DCMAKE_BUILD_TYPE<span class="o">=</span>Release<span class="w"> </span><span class="se">\</span>
--DBUILD_PYTHON3<span class="o">=</span>ON<span class="w"> </span><span class="se">\</span>
--DPYTHON_INCLUDE_DIR<span class="o">=</span><span class="nv">$HOME</span>/anaconda3/include/python3.6m<span class="w"> </span><span class="se">\</span>
--DPYTHON_LIBRARY<span class="o">=</span><span class="nv">$HOME</span>/anaconda3/lib/libpython3.6m.dylib<span class="w"> </span><span class="se">\</span>
--DPYTHON_EXECUTABLE<span class="o">=</span><span class="nv">$HOME</span>/anaconda3/bin/python3<span class="w"> </span><span class="se">\</span>
--DBOOST_PYTHON3_LIBRARY<span class="o">=</span>/usr/local/Cellar/boost-python/1.64.0/lib/libboost_python3.dylib<span class="w"> </span><span class="se">\</span>
--DNUMPY_INCLUDES<span class="o">=</span><span class="nv">$HOME</span>/anaconda3/lib/python3.6/site-packages/numpy/core/include
-</pre></div>
-</div>
-<ol class="arabic simple" start="4">
-<li><p>Build it!</p></li>
-</ol>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>make
-</pre></div>
-</div>
-<ol class="arabic simple" start="5">
-<li><p>Move the output to anaconda’s <code class="docutils literal notranslate"><span class="pre">site-packages</span></code> directory, or your local virtual environments <code class="docutils literal notranslate"><span class="pre">site-packages</span></code> directory.</p></li>
-</ol>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>mv<span class="w"> </span>-r<span class="w"> </span>build/bin/python3/pip_package/<span class="w"> </span><span class="nv">$HOME</span>/anaconda3/lib/python3.6/site-packages/vizdoom
-</pre></div>
-</div>
-<ol class="arabic simple" start="6">
-<li><p>Test if it works.</p></li>
-</ol>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>examples/python
-./basic.py
-</pre></div>
-</div>
-</section>
+            <section id="enums">
+<h1>Enums<a class="headerlink" href="#enums" title="Permalink to this heading">#</a></h1>
+<p>This page is under construction.</p>
 </section>
 
           </article>
@@ -381,18 +326,18 @@ cmake<span class="w"> </span>..<span class="w"> </span>-DCMAKE_BUILD_TYPE<span c
         <footer>
           
           <div class="related-pages">
-            <a class="next-page" href="../installation/">
+            <a class="next-page" href="../utils/">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Installation and building</div>
+                <div class="title">Utils</div>
               </div>
               <svg class="furo-related-icon">
                 <use href="#svg-arrow-right"></use>
               </svg>
             </a>
-            <a class="prev-page" href="../../">
+            <a class="prev-page" href="../gameState/">
               <svg class="furo-related-icon">
                 <use href="#svg-arrow-right"></use>
               </svg>
@@ -401,7 +346,7 @@ cmake<span class="w"> </span>..<span class="w"> </span>-DCMAKE_BUILD_TYPE<span c
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Home</div>
+                <div class="title">GameState</div>
                 
               </div>
             </a>
@@ -433,27 +378,8 @@ cmake<span class="w"> </span>..<span class="w"> </span>-DCMAKE_BUILD_TYPE<span c
           
         </footer>
       </div>
-      <aside class="toc-drawer">
+      <aside class="toc-drawer no-toc">
         
-        
-        <div class="toc-sticky toc-scroll">
-          <div class="toc-title-container">
-            <span class="toc-title">
-              On this page
-            </span>
-          </div>
-          <div class="toc-tree-container">
-            <div class="toc-tree">
-              <ul>
-<li><a class="reference internal" href="#">Quickstart</a><ul>
-<li><a class="reference internal" href="#quickstart-for-macos-and-anaconda3-python-3-6"><a name="quickstart_macos_anaconda"></a> Quickstart for MacOS and Anaconda3 (Python 3.6)</a></li>
-</ul>
-</li>
-</ul>
-
-            </div>
-          </div>
-        </div>
         
         
       </aside>

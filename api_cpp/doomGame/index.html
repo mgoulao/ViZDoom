@@ -7,15 +7,15 @@
     <meta property="og:title" content="ViZDoom Documentation" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="" />
-    <meta property="og:url" content="https://vizdoom.farama.org/api/doomGame.html" /><meta property="og:image" content="https://vizdoom.farama.org/_static/img/vizdoom-github.png" /><meta name="twitter:card" content="summary_large_image"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Configuration files" href="../configuration/" /><link rel="prev" title="Wrapper" href="../../introduction/wrappers/" />
-        <link rel="canonical" href="https://vizdoom.farama.org/api/doomGame.html" />
+    <meta property="og:url" content="https://vizdoom.farama.org/api_cpp/doomGame.html" /><meta property="og:image" content="https://vizdoom.farama.org/_static/img/vizdoom-github.png" /><meta name="twitter:card" content="summary_large_image"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="GameState" href="../gameState/" /><link rel="prev" title="Utils" href="../../api_python/utils/" />
+        <link rel="canonical" href="https://vizdoom.farama.org/api_cpp/doomGame.html" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.png"/><!-- Generated with Sphinx 6.2.1 and Furo 2022.12.07.dev1 -->
+    <link rel="shortcut icon" href="../../_static/favicon.png"/><!-- Generated with Sphinx 7.0.1 and Furo 2023.05.20.dev1 -->
         <title>DoomGame - ViZDoom Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=cfd2cc3354364f303ef4a892d279bfffada5835d" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=6342a809aabeb35cfac296000cfa245808bc1d78" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=a022fd11c0d7e10ac71ac296890386cea7a2fa24" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=093e2efd5a2c7b46ab7c7157e45f5f05a1e0a463" />
     
     
 
@@ -224,22 +224,36 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../introduction/quickstart/">Quickstart</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../introduction/installation/">Installation and building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/pythonQuickstart/">Python quick start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/building/">Building from source</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../introduction/wrappers/">Wrapper</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">API</span></p>
+<p class="caption" role="heading"><span class="caption-text">Python API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api_python/gymnasium/">Gymnasium</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_python/doomGame/">DoomGame</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_python/gameState/">GameState</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_python/enums/">Enums</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_python/utils/">Utils</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">C++ API</span></p>
 <ul class="current">
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">DoomGame</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../configuration/">Configuration files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gameState/">GameState</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enums/">Enums</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configurationFiles/">Configuration files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../exceptions/">Exceptions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../types/">Types</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../utils/">Utilities</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Environments</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../environments/default/">Default scenarios/environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../environments/creatingCustom/">Creating a custom enviroment</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Others</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../faq/">FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../citation/">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../citation/">How to cite</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Development</span></p>
 <ul>
@@ -271,7 +285,7 @@
             <span>Back to top</span>
           </a>
           <div class="content-icon-container"><div class="edit-this-page">
-  <a class="muted-link" href="https://github.com/Farama-Foundation/ViZDoom/edit/master/docs/api/doomGame.md" title="Edit this page">
+  <a class="muted-link" href="https://github.com/Farama-Foundation/ViZDoom/edit/master/docs/api_cpp/doomGame.md" title="Edit this page">
     <svg aria-hidden="true" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
       <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" />
@@ -305,10 +319,9 @@
             <section id="doomgame">
 <h1>DoomGame<a class="headerlink" href="#doomgame" title="Permalink to this heading">#</a></h1>
 <p>DoomGame is the main object of the ViZDoom library, representing a single instance of the Doom game and providing the interface for a single agent/player to interact with the game. The object allows sending actions to the game, getting the game state, etc.</p>
-<p>Here we document all the methods of the DoomGame class and their Python bindings.</p>
+<p>Here we document all the methods of the DoomGame class and their corresponding Python bindings implemented as pybind11 module.</p>
 <section id="flow-control-methods">
 <h2>Flow control methods:<a class="headerlink" href="#flow-control-methods" title="Permalink to this heading">#</a></h2>
-<hr class="docutils" />
 <section id="init">
 <h3><code class="docutils literal notranslate"><span class="pre">init</span></code><a class="headerlink" href="#init" title="Permalink to this heading">#</a></h3>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -358,12 +371,12 @@ The game can be initialized again after being closed.</p>
 <table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head text-left"><p>C++</p></th>
-<th class="head text-left"><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">newEpisode(std::string</span> <span class="pre">recordFilePath</span> <span class="pre">=</span> <span class="pre">&quot;&quot;)</span></code></p></th>
+<th class="head text-left"><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">newEpisode(std::string</span> <span class="pre">recordingFilePath</span> <span class="pre">=</span> <span class="pre">&quot;&quot;)</span></code></p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td class="text-left"><p>Python</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">new_episode(recordFilePath:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">&quot;&quot;)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">new_episode(recordingFilePath:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">&quot;&quot;)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></code></p></td>
 </tr>
 </tbody>
 </table>
@@ -371,7 +384,7 @@ The game can be initialized again after being closed.</p>
 <p>Changed in 1.1.0</p>
 <p>Initializes a new episode. The state of an environment is completely restarted (all variables and rewards are reset to their initial values).
 After calling this method, the first state from the new episode will be available.
-If the <code class="docutils literal notranslate"><span class="pre">recordFilePath</span></code> is not empty, the new episode will be recorded to this file (as a Doom lump).</p>
+If the <code class="docutils literal notranslate"><span class="pre">recordingFilePath</span></code> is not empty, the new episode will be recorded to this file (as a Doom lump).</p>
 <p>In a multiplayer game, the host can call this method to finish the game.
 Then the rest of the players must also call this method to start a new episode.</p>
 </section>
@@ -500,7 +513,7 @@ All rewards, variables, and states are available during the replaying episode.</
 </table>
 </div>
 <p>Sets the player’s action for the next tics.
-Each value corresponds to a button specified with <a class="reference internal" href="#addAvailableButton"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">addAvailableButton</span></code></span></a> method
+Each value corresponds to a button specified with <a class="reference internal" href="#addavailablebutton"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">addAvailableButton</span></code></span></a> method
 or in the configuration file (in order of appearance).</p>
 </section>
 <hr class="docutils" />
@@ -542,7 +555,7 @@ If <code class="docutils literal notranslate"><span class="pre">updateState</spa
 </tbody>
 </table>
 </div>
-<p>Method combining usability of <a class="reference internal" href="#setAction"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">setAction</span></code></span></a>, <a class="reference internal" href="#advanceAction"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">advanceAction</span></code></span></a> and <a class="reference internal" href="#getLastReward"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">getLastReward</span></code></span></a>.
+<p>Method combining usability of <a class="reference internal" href="#setaction"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">setAction</span></code></span></a>, <a class="reference internal" href="#advanceaction"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">advanceAction</span></code></span></a> and <a class="reference internal" href="#getlastreward"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">getLastReward</span></code></span></a>.
 Sets the player’s action for the next tics, processes a specified number of tics,
 updates the state and calculates a new reward, which is returned.</p>
 </section>
@@ -583,7 +596,7 @@ updates the state and calculates a new reward, which is returned.</p>
 </table>
 </div>
 <p>Returns true if the current episode is in the terminal state (is finished).
-<a class="reference internal" href="#makeAction"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">makeAction</span></code></span></a> and <a class="reference internal" href="#advanceAction"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">advanceAction</span></code></span></a> methods will take no effect after this point (unless <a class="reference internal" href="#newEpisode"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">newEpisode</span></code></span></a> method is called).</p>
+<a class="reference internal" href="#makeaction"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">makeAction</span></code></span></a> and <a class="reference internal" href="#advanceaction"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">advanceAction</span></code></span></a> methods will take no effect after this point (unless <a class="reference internal" href="#newepisode"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">newEpisode</span></code></span></a> method is called).</p>
 </section>
 <hr class="docutils" />
 <section id="isplayerdead">
@@ -604,7 +617,7 @@ updates the state and calculates a new reward, which is returned.</p>
 </div>
 <p>Returns true if the player is dead.
 In singleplayer, the player’s death is equivalent to the end of the episode.
-In multiplayer, when the player is dead <a class="reference internal" href="#respawnPlayer"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">respawnPlayer</span></code></span></a> method can be called.</p>
+In multiplayer, when the player is dead <a class="reference internal" href="#respawnplayer"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">respawnPlayer</span></code></span></a> method can be called.</p>
 </section>
 <hr class="docutils" />
 <section id="respawnplayer">
@@ -627,7 +640,7 @@ In multiplayer, when the player is dead <a class="reference internal" href="#res
 After calling this method, the first state after the respawn will be available.</p>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#isMultiplayerGame"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">isMultiplayerGame</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="#ismultiplayergame"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">isMultiplayerGame</span></code></span></a></p></li>
 </ul>
 </section>
 <hr class="docutils" />
@@ -674,11 +687,11 @@ Some commands will be blocked in some modes.</p>
 </table>
 </div>
 <p>Changed in 1.1.0</p>
-<p>Returns <a class="reference internal" href="#Types.md#gamestate"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">GameState</span></code></span></a> object with the current game state.
+<p>Returns <a class="reference internal" href="../gameState/#gamestate"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">GameState</span></code></span></a> object with the current game state.
 If the current episode is finished, <code class="docutils literal notranslate"><span class="pre">nullptr/null/None</span></code> will be returned.</p>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#Types.md#gamestate"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Types:</span> <span class="pre">GameState</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../gameState/#gamestate"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">GameState</span></code></span></a></p></li>
 </ul>
 </section>
 <hr class="docutils" />
@@ -699,10 +712,10 @@ If the current episode is finished, <code class="docutils literal notranslate"><
 </table>
 </div>
 <p>Added in 1.1.6</p>
-<p>Returns <a class="reference internal" href="#Types.md#serverstate"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">ServerState</span></code></span></a> object with the current server state.</p>
+<p>Returns <a class="reference internal" href="../gameState/#serverstate"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">ServerState</span></code></span></a> object with the current server state.</p>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#Types.md#serverstate"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Types:</span> <span class="pre">ServerState</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../gameState/#serverstate"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">ServerState</span></code></span></a></p></li>
 </ul>
 </section>
 <hr class="docutils" />
@@ -791,7 +804,6 @@ tic counter/time and total reward state keep their values.</p>
 </section>
 <section id="buttons-settings-methods">
 <h2>Buttons settings methods<a class="headerlink" href="#buttons-settings-methods" title="Permalink to this heading">#</a></h2>
-<hr class="docutils" />
 <section id="getavailablebuttons">
 <h3><code class="docutils literal notranslate"><span class="pre">getAvailableButtons</span></code><a class="headerlink" href="#getavailablebuttons" title="Permalink to this heading">#</a></h3>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -811,9 +823,9 @@ tic counter/time and total reward state keep their values.</p>
 <p>Returns the list of available <code class="docutils literal notranslate"><span class="pre">Buttons</span></code>.</p>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#Types.md#button"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Types:</span> <span class="pre">Button</span></code></span></a></p></li>
-<li><p><a class="reference internal" href="#addAvailableButton"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">addAvailableButton</span></code></span></a></p></li>
-<li><p><a class="reference internal" href="#addAvailableButtons"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">setAvailableButtons</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../enums/#button"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">Enums:</span> <span class="pre">Button</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="#addavailablebutton"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">addAvailableButton</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="#addavailablebuttons"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">setAvailableButtons</span></code></span></a></p></li>
 </ul>
 </section>
 <hr class="docutils" />
@@ -837,9 +849,9 @@ tic counter/time and total reward state keep their values.</p>
 <p>Config key: <code class="docutils literal notranslate"><span class="pre">availableButtons/available_buttons</span></code> (list)</p>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#Types.md#button"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Types:</span> <span class="pre">Button</span></code></span></a></p></li>
-<li><p><a class="reference internal" href="#ConfigFile.md#list"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">ConfigFile:</span> <span class="pre">List</span></code></span></a></p></li>
-<li><p><a class="reference internal" href="#addAvailableButton"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">addAvailableButton</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../enums/#button"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">Enums:</span> <span class="pre">Button</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../configurationFiles/#list"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">ConfigFile:</span> <span class="pre">List</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="#addavailablebutton"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">addAvailableButton</span></code></span></a></p></li>
 </ul>
 </section>
 <hr class="docutils" />
@@ -859,15 +871,15 @@ tic counter/time and total reward state keep their values.</p>
 </tbody>
 </table>
 </div>
-<p>Add <a class="reference internal" href="#Types.md#button"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Button</span></code></span></a> type (e.g. <code class="docutils literal notranslate"><span class="pre">TURN_LEFT</span></code>, <code class="docutils literal notranslate"><span class="pre">MOVE_FORWARD</span></code>) to available <code class="docutils literal notranslate"><span class="pre">Buttons</span></code> and sets the maximum allowed, absolute value for the specified button.
+<p>Add <a class="reference internal" href="../enums/#button"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">Button</span></code></span></a> type (e.g. <code class="docutils literal notranslate"><span class="pre">TURN_LEFT</span></code>, <code class="docutils literal notranslate"><span class="pre">MOVE_FORWARD</span></code>) to available <code class="docutils literal notranslate"><span class="pre">Buttons</span></code> and sets the maximum allowed, absolute value for the specified button.
 If the given button has already been added, it will not be added again, but the maximum value is overridden.</p>
 <p>Config key: <code class="docutils literal notranslate"><span class="pre">availableButtons/available_buttons</span></code> (list)</p>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#Types.md#button"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Types:</span> <span class="pre">Button</span></code></span></a></p></li>
-<li><p><a class="reference internal" href="#ConfigFile.md#list"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">ConfigFile:</span> <span class="pre">List</span></code></span></a></p></li>
-<li><p><a class="reference internal" href="#addAvailableButtons"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">setAvailableButtons</span></code></span></a></p></li>
-<li><p><a class="reference internal" href="#setButtonMaxValue"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">setButtonMaxValue</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../enums/#button"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">Enums:</span> <span class="pre">Button</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../configurationFiles/#list"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">ConfigFile:</span> <span class="pre">List</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="#addavailablebuttons"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">setAvailableButtons</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="#setbuttonmaxvalue"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">setButtonMaxValue</span></code></span></a></p></li>
 </ul>
 </section>
 <hr class="docutils" />
@@ -890,7 +902,7 @@ If the given button has already been added, it will not be added again, but the 
 <p>Clears all available <code class="docutils literal notranslate"><span class="pre">Buttons</span></code> added so far.</p>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#Types.md#button"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Types:</span> <span class="pre">Button</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../enums/#button"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">Enums:</span> <span class="pre">Button</span></code></span></a></p></li>
 </ul>
 </section>
 <hr class="docutils" />
@@ -913,7 +925,7 @@ If the given button has already been added, it will not be added again, but the 
 <p>Returns the number of available <code class="docutils literal notranslate"><span class="pre">Buttons</span></code>.</p>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#Types.md#button"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Types:</span> <span class="pre">Button</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../enums/#button"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">Enums:</span> <span class="pre">Button</span></code></span></a></p></li>
 </ul>
 </section>
 <hr class="docutils" />
@@ -939,7 +951,7 @@ This method makes sense only for delta buttons.
 The constraints limit applies in all Modes.</p>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#Types.md#button"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Types:</span> <span class="pre">Button</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../enums/#button"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">Enums:</span> <span class="pre">Button</span></code></span></a></p></li>
 </ul>
 </section>
 <hr class="docutils" />
@@ -962,7 +974,7 @@ The constraints limit applies in all Modes.</p>
 <p>Returns the maximum allowed absolute value for the specified button.</p>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#Types.md#button"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Types:</span> <span class="pre">Button</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../enums/#button"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">Enums:</span> <span class="pre">Button</span></code></span></a></p></li>
 </ul>
 </section>
 <hr class="docutils" />
@@ -985,13 +997,12 @@ The constraints limit applies in all Modes.</p>
 <p>Returns the current state of the specified button (<code class="docutils literal notranslate"><span class="pre">ATTACK</span></code>, <code class="docutils literal notranslate"><span class="pre">USE</span></code> etc.).</p>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#Types.md#button"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Types:</span> <span class="pre">Button</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../enums/#button"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">Enums:</span> <span class="pre">Button</span></code></span></a></p></li>
 </ul>
 </section>
 </section>
 <section id="gamevariables-methods">
 <h2>GameVariables methods<a class="headerlink" href="#gamevariables-methods" title="Permalink to this heading">#</a></h2>
-<hr class="docutils" />
 <section id="getavailablegamevariables">
 <h3><code class="docutils literal notranslate"><span class="pre">getAvailableGameVariables</span></code><a class="headerlink" href="#getavailablegamevariables" title="Permalink to this heading">#</a></h3>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -1011,9 +1022,9 @@ The constraints limit applies in all Modes.</p>
 <p>Returns the list of available <code class="docutils literal notranslate"><span class="pre">GameVariables</span></code>.</p>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#Types.md#gamevariable"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Types:</span> <span class="pre">GameVariable</span></code></span></a></p></li>
-<li><p><a class="reference internal" href="#addAvailableGameVariable"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">addAvailableGameVariable</span></code></span></a></p></li>
-<li><p><a class="reference internal" href="#setAvailableGameVariables"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">setAvailableGameVariables</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../enums/#gamevariable"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">Enums:</span> <span class="pre">GameVariable</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="#addavailablegamevariable"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">addAvailableGameVariable</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="#setavailablegamevariables"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">setAvailableGameVariables</span></code></span></a></p></li>
 </ul>
 </section>
 <hr class="docutils" />
@@ -1033,13 +1044,13 @@ The constraints limit applies in all Modes.</p>
 </tbody>
 </table>
 </div>
-<p>Set list of <a class="reference internal" href="#Types.md#gamevariable"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">GameVariable</span></code></span></a> as available <code class="docutils literal notranslate"><span class="pre">GameVariables</span></code> in the <a class="reference internal" href="#Types.md#gamestate"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">GameState</span></code></span></a> returned by <code class="docutils literal notranslate"><span class="pre">getState</span></code> method.</p>
+<p>Set list of <a class="reference internal" href="../enums/#gamevariable"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">GameVariable</span></code></span></a> as available <code class="docutils literal notranslate"><span class="pre">GameVariables</span></code> in the <a class="reference internal" href="../gameState/#gamestate"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">GameState</span></code></span></a> returned by <code class="docutils literal notranslate"><span class="pre">getState</span></code> method.</p>
 <p>Config key: <code class="docutils literal notranslate"><span class="pre">availableGameVariables/available_game_variables</span></code> (list)</p>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#Types.md#gamevariable"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Types:</span> <span class="pre">GameVariable</span></code></span></a></p></li>
-<li><p><a class="reference internal" href="#ConfigFile.md#list"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">ConfigFile:</span> <span class="pre">List</span></code></span></a></p></li>
-<li><p><a class="reference internal" href="#addAvailableGameVariable"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">addAvailableGameVariable</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../enums/#gamevariable"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">Enums:</span> <span class="pre">GameVariable</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../configurationFiles/#list"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">ConfigFile:</span> <span class="pre">List</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="#addavailablegamevariable"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">addAvailableGameVariable</span></code></span></a></p></li>
 </ul>
 </section>
 <hr class="docutils" />
@@ -1059,13 +1070,13 @@ The constraints limit applies in all Modes.</p>
 </tbody>
 </table>
 </div>
-<p>Adds the specified <a class="reference internal" href="#Types.md#gamevariable"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">GameVariable</span></code></span></a> to the list of available game variables (e.g. <code class="docutils literal notranslate"><span class="pre">HEALTH</span></code>, <code class="docutils literal notranslate"><span class="pre">AMMO1</span></code>, <code class="docutils literal notranslate"><span class="pre">ATTACK_READY</span></code>) in the <a class="reference internal" href="#Types.md#gamestate"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">GameState</span></code></span></a> returned by <code class="docutils literal notranslate"><span class="pre">getState</span></code> method.</p>
+<p>Adds the specified <a class="reference internal" href="../enums/#gamevariable"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">GameVariable</span></code></span></a> to the list of available game variables (e.g. <code class="docutils literal notranslate"><span class="pre">HEALTH</span></code>, <code class="docutils literal notranslate"><span class="pre">AMMO1</span></code>, <code class="docutils literal notranslate"><span class="pre">ATTACK_READY</span></code>) in the <a class="reference internal" href="../gameState/#gamestate"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">GameState</span></code></span></a> returned by <code class="docutils literal notranslate"><span class="pre">getState</span></code> method.</p>
 <p>Config key: <code class="docutils literal notranslate"><span class="pre">availableGameVariables/available_game_variables</span></code> (list)</p>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#Types.md#gamevariable"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Types:</span> <span class="pre">GameVariable</span></code></span></a></p></li>
-<li><p><a class="reference internal" href="#ConfigFile.md#list"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">ConfigFile:</span> <span class="pre">List</span></code></span></a></p></li>
-<li><p><a class="reference internal" href="#setAvailableGameVariables"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">setAvailableGameVariables</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../enums/#gamevariable"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">Enums:</span> <span class="pre">GameVariable</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../configurationFiles/#list"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">ConfigFile:</span> <span class="pre">List</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="#setavailablegamevariables"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">setAvailableGameVariables</span></code></span></a></p></li>
 </ul>
 </section>
 <hr class="docutils" />
@@ -1085,11 +1096,11 @@ The constraints limit applies in all Modes.</p>
 </tbody>
 </table>
 </div>
-<p>Clears the list of available <code class="docutils literal notranslate"><span class="pre">GameVariables</span></code> that are included in the GameState returned by <a class="reference internal" href="#getState"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">getState</span></code></span></a> method.</p>
+<p>Clears the list of available <code class="docutils literal notranslate"><span class="pre">GameVariables</span></code> that are included in the <a class="reference internal" href="../gameState/#gamestate"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">GameState</span></code></span></a> returned by <a class="reference internal" href="#getstate"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">getState</span></code></span></a> method.</p>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#Types.md#gamevariable"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Types:</span> <span class="pre">GameVariable</span></code></span></a></p></li>
-<li><p><a class="reference internal" href="#ConfigFile.md#list"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">ConfigFile:</span> <span class="pre">List</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../enums/#gamevariable"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">Enums:</span> <span class="pre">GameVariable</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../configurationFiles/#list"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">ConfigFile:</span> <span class="pre">List</span></code></span></a></p></li>
 </ul>
 </section>
 <hr class="docutils" />
@@ -1112,8 +1123,8 @@ The constraints limit applies in all Modes.</p>
 <p>Returns the number of available <code class="docutils literal notranslate"><span class="pre">GameVariables</span></code>.</p>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#Types.md#gamevariable"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Types:</span> <span class="pre">GameVariable</span></code></span></a></p></li>
-<li><p><a class="reference internal" href="#ConfigFile.md#list"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">ConfigFile:</span> <span class="pre">List</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../enums/#gamevariable"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">Enums:</span> <span class="pre">GameVariable</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../configurationFiles/#list"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">ConfigFile:</span> <span class="pre">List</span></code></span></a></p></li>
 </ul>
 </section>
 <hr class="docutils" />
@@ -1138,13 +1149,12 @@ The specified game variable does not need to be among available game variables (
 It could be used for e.g. shaping. Returns 0 in case of not finding given <code class="docutils literal notranslate"><span class="pre">GameVariable</span></code>.</p>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#Types.md#gamevariable"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Types:</span> <span class="pre">GameVariable</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../enums/#gamevariable"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">Enums:</span> <span class="pre">GameVariable</span></code></span></a></p></li>
 </ul>
 </section>
 </section>
 <section id="game-arguments-methods">
 <h2>Game Arguments methods<a class="headerlink" href="#game-arguments-methods" title="Permalink to this heading">#</a></h2>
-<hr class="docutils" />
 <section id="addgameargs">
 <h3><code class="docutils literal notranslate"><span class="pre">addGameArgs</span></code><a class="headerlink" href="#addgameargs" title="Permalink to this heading">#</a></h3>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -1187,12 +1197,11 @@ Useful for changing additional game settings.</p>
 </tbody>
 </table>
 </div>
-<p>Clears all arguments previously added with <a class="reference internal" href="#addGameArgs"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">addGameArgs</span></code></span></a> method.</p>
+<p>Clears all arguments previously added with <a class="reference internal" href="#addgameargs"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">addGameArgs</span></code></span></a> method.</p>
 </section>
 </section>
 <section id="reward-methods">
 <h2>Reward methods<a class="headerlink" href="#reward-methods" title="Permalink to this heading">#</a></h2>
-<hr class="docutils" />
 <section id="getlivingreward">
 <h3><code class="docutils literal notranslate"><span class="pre">getLivingReward</span></code><a class="headerlink" href="#getlivingreward" title="Permalink to this heading">#</a></h3>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -1313,7 +1322,6 @@ Useful for changing additional game settings.</p>
 </section>
 <section id="general-game-setting-methods">
 <h2>General game setting methods<a class="headerlink" href="#general-game-setting-methods" title="Permalink to this heading">#</a></h2>
-<hr class="docutils" />
 <section id="loadconfig">
 <h3><code class="docutils literal notranslate"><span class="pre">loadConfig</span></code><a class="headerlink" href="#loadconfig" title="Permalink to this heading">#</a></h3>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -1337,7 +1345,7 @@ The method returns true if the whole configuration file was correctly read and a
 false if the file contained errors.</p>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#ConfigFile.md"><span class="xref myst">ConfigFile</span></a></p></li>
+<li><p><a class="reference internal" href="../configurationFiles/"><span class="std std-doc">ConfigFile</span></a></p></li>
 </ul>
 </section>
 <hr class="docutils" />
@@ -1360,7 +1368,7 @@ false if the file contained errors.</p>
 <p>Returns current mode (<code class="docutils literal notranslate"><span class="pre">PLAYER</span></code>, <code class="docutils literal notranslate"><span class="pre">SPECTATOR</span></code>, <code class="docutils literal notranslate"><span class="pre">ASYNC_PLAYER</span></code>, <code class="docutils literal notranslate"><span class="pre">ASYNC_SPECTATOR</span></code>).</p>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#Types.md#mode"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Types:</span> <span class="pre">Mode</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../enums/#mode"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">Enums:</span> <span class="pre">Mode</span></code></span></a></p></li>
 </ul>
 </section>
 <hr class="docutils" />
@@ -1385,7 +1393,7 @@ false if the file contained errors.</p>
 <p>Config key: <code class="docutils literal notranslate"><span class="pre">mode</span></code></p>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#Types.md#mode"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Types:</span> <span class="pre">Mode</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../enums/#mode"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">Enums:</span> <span class="pre">Mode</span></code></span></a></p></li>
 </ul>
 </section>
 <hr class="docutils" />
@@ -1699,8 +1707,6 @@ Every episode will effectively start (from the user’s perspective) after the p
 </section>
 <section id="output-rendering-setting-methods">
 <h2>Output/rendering setting methods<a class="headerlink" href="#output-rendering-setting-methods" title="Permalink to this heading">#</a></h2>
-<hr class="docutils" />
-<hr class="docutils" />
 <section id="setscreenresolution">
 <h3><code class="docutils literal notranslate"><span class="pre">setScreenResolution</span></code><a class="headerlink" href="#setscreenresolution" title="Permalink to this heading">#</a></h3>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -1724,7 +1730,7 @@ The buffers, as well as the content of ViZDoom’s display window, will be affec
 <p>Config key: <code class="docutils literal notranslate"><span class="pre">screenResolution/screen_resolution</span></code></p>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#Types.md#screenresolution"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Types:</span> <span class="pre">ScreenResolution</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../enums/#screenresolution"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">Enums:</span> <span class="pre">ScreenResolution</span></code></span></a></p></li>
 </ul>
 </section>
 <hr class="docutils" />
@@ -1770,7 +1776,7 @@ The format change affects only the buffers, so it will not have any effect on th
 <p>Config key: <code class="docutils literal notranslate"><span class="pre">screenFormat/screen_format</span></code></p>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#Types.md#screenformat"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Types:</span> <span class="pre">ScreenFormat</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../enums/#screenformat"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">Enums:</span> <span class="pre">ScreenFormat</span></code></span></a></p></li>
 </ul>
 </section>
 <hr class="docutils" />
@@ -1817,7 +1823,7 @@ Depth buffer will contain noise if <code class="docutils literal notranslate"><s
 <p>Config key: <code class="docutils literal notranslate"><span class="pre">depthBufferEnabled/depth_buffer_enabled</span></code></p>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#Types.md#gamestate"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Types:</span> <span class="pre">GameState</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../gameState/#gamestate"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">GameState</span></code></span></a></p></li>
 <li><p><a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/tree/master/examples/python/buffers.py">examples/python/buffers.py</a></p></li>
 </ul>
 </section>
@@ -1865,8 +1871,8 @@ LabelsBuffer will contain noise if <code class="docutils literal notranslate"><s
 <p>Config key: <code class="docutils literal notranslate"><span class="pre">labelsBufferEnabled/labels_buffer_enabled</span></code></p>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#Types.md#label"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Types:</span> <span class="pre">Label</span></code></span></a></p></li>
-<li><p><a class="reference internal" href="#Types.md#gamestate"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Types:</span> <span class="pre">GameState</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../gameState/#label"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">GameState:</span> <span class="pre">Label</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../gameState/#gamestate"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">GameState</span></code></span></a></p></li>
 <li><p><a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/tree/master/examples/python/labels.py">examples/python/labels.py</a></p></li>
 <li><p><a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/tree/master/examples/python/buffers.py">examples/python/buffers.py</a></p></li>
 </ul>
@@ -1914,7 +1920,7 @@ LabelsBuffer will contain noise if <code class="docutils literal notranslate"><s
 <p>Config key: <code class="docutils literal notranslate"><span class="pre">automapBufferEnabled/automap_buffer_enabled</span></code></p>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#Types.md#gamestate"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Types:</span> <span class="pre">GameState</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../gameState/#gamestate"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">GameState</span></code></span></a></p></li>
 <li><p><a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/tree/master/examples/python/buffers.py">examples/python/buffers.py</a>,</p></li>
 </ul>
 </section>
@@ -1942,7 +1948,7 @@ which determines what will be visible on it.</p>
 <p>Config key: <code class="docutils literal notranslate"><span class="pre">automapMode/set_automap_mode</span></code></p>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#Types.md#automapmode"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Types:</span> <span class="pre">AutomapMode</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../enums/#automapmode"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">Enums:</span> <span class="pre">AutomapMode</span></code></span></a></p></li>
 </ul>
 </section>
 <hr class="docutils" />
@@ -2230,7 +2236,7 @@ It only makes sense to use it if the window is visible.</p>
 <p>Config key: <code class="docutils literal notranslate"><span class="pre">renderAllFrames/render_all_frames</span></code></p>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#setWindowVisible"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">setWindowVisible</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="#setwindowvisible"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">setWindowVisible</span></code></span></a></p></li>
 </ul>
 </section>
 <hr class="docutils" />
@@ -2436,8 +2442,8 @@ It will be available in the state.</p>
 <p>Config key: <code class="docutils literal notranslate"><span class="pre">objectsInfoEnabled/objects_info_enabled</span></code></p>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#Types.md#gamestate"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Types:</span> <span class="pre">GameState</span></code></span></a></p></li>
-<li><p><a class="reference internal" href="#Types.md#object"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Types:</span> <span class="pre">Object</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../gameState/#gamestate"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">GameState</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../gameState/#object"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">GameState:</span> <span class="pre">Object</span></code></span></a></p></li>
 <li><p><a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/tree/master/examples/python/objects_and_sectors.py">examples/python/objects_and_sectors.py</a>,</p></li>
 </ul>
 </section>
@@ -2485,8 +2491,8 @@ It will be available in the state.</p>
 <p>Config key: <code class="docutils literal notranslate"><span class="pre">sectorsInfoEnabled/sectors_info_enabled</span></code></p>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#Types.md#gamestate"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Types:</span> <span class="pre">GameState</span></code></span></a></p></li>
-<li><p><a class="reference internal" href="#Types.md#sector"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Types:</span> <span class="pre">Sector</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../gameState/#gamestate"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">GameState</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../gameState/#sector"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">GameState:</span> <span class="pre">Sector</span></code></span></a></p></li>
 <li><p><a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/tree/master/examples/python/objects_and_sectors.py">examples/python/objects_and_sectors.py</a></p></li>
 </ul>
 </section>
@@ -2511,8 +2517,8 @@ It will be available in the state.</p>
 <p>Returns true if the audio buffer is enabled.</p>
 </section>
 <hr class="docutils" />
-<section id="id1">
-<h3><code class="docutils literal notranslate"><span class="pre">setSectorsInfoEnabled</span></code><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<section id="setaudiobufferenabled">
+<h3><code class="docutils literal notranslate"><span class="pre">setAudioBufferEnabled</span></code><a class="headerlink" href="#setaudiobufferenabled" title="Permalink to this heading">#</a></h3>
 <div class="table-wrapper colwidths-auto docutils container">
 <table class="docutils align-default">
 <thead>
@@ -2533,8 +2539,8 @@ It will be available in the state.</p>
 <p>Config key: <code class="docutils literal notranslate"><span class="pre">audioBufferEnabled/audio_buffer_enabled</span></code></p>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#Types.md#gamestate"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Types:</span> <span class="pre">GameState</span></code></span></a></p></li>
-<li><p><a class="reference internal" href="#Types.md#sampling-rate"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Types:</span> <span class="pre">SamplingRate</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../gameState/#gamestate"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">GameState</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../enums/#sampling-rate"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">Enums:</span> <span class="pre">SamplingRate</span></code></span></a></p></li>
 <li><p><a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/tree/master/examples/python/audio_buffer.py">examples/python/audio_buffer.py</a></p></li>
 </ul>
 </section>
@@ -2559,8 +2565,8 @@ It will be available in the state.</p>
 <p>Returns the sampling rate of the audio buffer.</p>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#Types.md#gamestate"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Types:</span> <span class="pre">GameState</span></code></span></a></p></li>
-<li><p><a class="reference internal" href="#Types.md#sampling-rate"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Types:</span> <span class="pre">SamplingRate</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../gameState/#gamestate"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">GameState</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../enums/#sampling-rate"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">Enums:</span> <span class="pre">SamplingRate</span></code></span></a></p></li>
 <li><p><a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/tree/master/examples/python/audio_buffer.py">examples/python/audio_buffer.py</a></p></li>
 </ul>
 </section>
@@ -2587,8 +2593,8 @@ It will be available in the state.</p>
 <p>Config key: <code class="docutils literal notranslate"><span class="pre">audioSamplingRate/audio_samping_rate</span></code></p>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#Types.md#gamestate"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Types:</span> <span class="pre">GameState</span></code></span></a></p></li>
-<li><p><a class="reference internal" href="#Types.md#sampling-rate"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Types:</span> <span class="pre">SamplingRate</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../gameState/#gamestate"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">GameState</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../enums/#sampling-rate"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">Enums:</span> <span class="pre">SamplingRate</span></code></span></a></p></li>
 <li><p><a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/tree/master/examples/python/audio_buffer.py">examples/python/audio_buffer.py</a></p></li>
 </ul>
 </section>
@@ -2613,7 +2619,7 @@ It will be available in the state.</p>
 <p>Returns the size of the audio buffer.</p>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#Types.md#gamestate"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Types:</span> <span class="pre">GameState</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../gameState/#gamestate"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">GameState</span></code></span></a></p></li>
 <li><p><a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/tree/master/examples/python/audio_buffer.py">examples/python/audio_buffer.py</a></p></li>
 </ul>
 </section>
@@ -2642,7 +2648,7 @@ Doom uses 35 ticks per second.</p>
 <p>Config key: <code class="docutils literal notranslate"><span class="pre">audioBufferSize/audio_buffer_size</span></code></p>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#Types.md#gamestate"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Types:</span> <span class="pre">GameState</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../gameState/#gamestate"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">GameState</span></code></span></a></p></li>
 <li><p><a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/tree/master/examples/python/audio_buffer.py">examples/python/audio_buffer.py</a></p></li>
 </ul>
 </section>
@@ -2654,18 +2660,18 @@ Doom uses 35 ticks per second.</p>
         <footer>
           
           <div class="related-pages">
-            <a class="next-page" href="../configuration/">
+            <a class="next-page" href="../gameState/">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Configuration files</div>
+                <div class="title">GameState</div>
               </div>
               <svg class="furo-related-icon">
                 <use href="#svg-arrow-right"></use>
               </svg>
             </a>
-            <a class="prev-page" href="../../introduction/wrappers/">
+            <a class="prev-page" href="../../api_python/utils/">
               <svg class="furo-related-icon">
                 <use href="#svg-arrow-right"></use>
               </svg>
@@ -2674,7 +2680,7 @@ Doom uses 35 ticks per second.</p>
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Wrapper</div>
+                <div class="title">Utils</div>
                 
               </div>
             </a>
@@ -2834,7 +2840,7 @@ Doom uses 35 ticks per second.</p>
 <li><a class="reference internal" href="#issectorsinfoenabled"><code class="docutils literal notranslate"><span class="pre">isSectorsInfoEnabled</span></code></a></li>
 <li><a class="reference internal" href="#setsectorsinfoenabled"><code class="docutils literal notranslate"><span class="pre">setSectorsInfoEnabled</span></code></a></li>
 <li><a class="reference internal" href="#isaudiobufferenabled"><code class="docutils literal notranslate"><span class="pre">isAudioBufferEnabled</span></code></a></li>
-<li><a class="reference internal" href="#id1"><code class="docutils literal notranslate"><span class="pre">setSectorsInfoEnabled</span></code></a></li>
+<li><a class="reference internal" href="#setaudiobufferenabled"><code class="docutils literal notranslate"><span class="pre">setAudioBufferEnabled</span></code></a></li>
 <li><a class="reference internal" href="#getaudiosamplingrate"><code class="docutils literal notranslate"><span class="pre">getAudioSamplingRate</span></code></a></li>
 <li><a class="reference internal" href="#setaudiosamplingrate"><code class="docutils literal notranslate"><span class="pre">setAudioSamplingRate</span></code></a></li>
 <li><a class="reference internal" href="#getaudiobuffersize"><code class="docutils literal notranslate"><span class="pre">getAudioBufferSize</span></code></a></li>

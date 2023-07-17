@@ -7,15 +7,15 @@
     <meta property="og:title" content="ViZDoom Documentation" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="" />
-    <meta property="og:url" content="https://vizdoom.farama.org/api/types.html" /><meta property="og:image" content="https://vizdoom.farama.org/_static/img/vizdoom-github.png" /><meta name="twitter:card" content="summary_large_image"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Utilities" href="../utils/" /><link rel="prev" title="Exceptions" href="../exceptions/" />
-        <link rel="canonical" href="https://vizdoom.farama.org/api/types.html" />
+    <meta property="og:url" content="https://vizdoom.farama.org/api_cpp/gameState.html" /><meta property="og:image" content="https://vizdoom.farama.org/_static/img/vizdoom-github.png" /><meta name="twitter:card" content="summary_large_image"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Enums" href="../enums/" /><link rel="prev" title="DoomGame" href="../doomGame/" />
+        <link rel="canonical" href="https://vizdoom.farama.org/api_cpp/gameState.html" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.png"/><!-- Generated with Sphinx 6.2.1 and Furo 2022.12.07.dev1 -->
-        <title>Types - ViZDoom Documentation</title>
+    <link rel="shortcut icon" href="../../_static/favicon.png"/><!-- Generated with Sphinx 7.0.1 and Furo 2023.05.20.dev1 -->
+        <title>GameState - ViZDoom Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=cfd2cc3354364f303ef4a892d279bfffada5835d" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=6342a809aabeb35cfac296000cfa245808bc1d78" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=a022fd11c0d7e10ac71ac296890386cea7a2fa24" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=093e2efd5a2c7b46ab7c7157e45f5f05a1e0a463" />
     
     
 
@@ -224,22 +224,36 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../introduction/quickstart/">Quickstart</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../introduction/installation/">Installation and building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/pythonQuickstart/">Python quick start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/building/">Building from source</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../introduction/wrappers/">Wrapper</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">API</span></p>
+<p class="caption" role="heading"><span class="caption-text">Python API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api_python/gymnasium/">Gymnasium</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_python/doomGame/">DoomGame</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_python/gameState/">GameState</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_python/enums/">Enums</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_python/utils/">Utils</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">C++ API</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../doomGame/">DoomGame</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../configuration/">Configuration files</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">GameState</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enums/">Enums</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configurationFiles/">Configuration files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../exceptions/">Exceptions</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Types</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../utils/">Utilities</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Environments</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../environments/default/">Default scenarios/environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../environments/creatingCustom/">Creating a custom enviroment</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Others</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../faq/">FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../citation/">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../citation/">How to cite</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Development</span></p>
 <ul>
@@ -271,7 +285,7 @@
             <span>Back to top</span>
           </a>
           <div class="content-icon-container"><div class="edit-this-page">
-  <a class="muted-link" href="https://github.com/Farama-Foundation/ViZDoom/edit/master/docs/api/types.md" title="Edit this page">
+  <a class="muted-link" href="https://github.com/Farama-Foundation/ViZDoom/edit/master/docs/api_cpp/gameState.md" title="Edit this page">
     <svg aria-hidden="true" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
       <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" />
@@ -302,21 +316,45 @@
           </div>
           <article role="main">
             
-            <section id="types">
-<h1>Types<a class="headerlink" href="#types" title="Permalink to this heading">#</a></h1>
-<section id="c-only">
-<h2>C++ only<a class="headerlink" href="#c-only" title="Permalink to this heading">#</a></h2>
+            <section id="gamestate">
+<h1>GameState<a class="headerlink" href="#gamestate" title="Permalink to this heading">#</a></h1>
+<p>GameState is the main object returned by <a class="reference internal" href="../doomGame/#getstate"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">DoomGame:</span> <span class="pre">getState</span></code></span></a> method.</p>
+<section id="id1">
+<h2><code class="docutils literal notranslate"><span class="pre">GameState</span></code><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<p>(<code class="docutils literal notranslate"><span class="pre">C++</span> <span class="pre">type</span> <span class="pre">/</span> <span class="pre">Python</span> <span class="pre">type</span></code> <strong>name</strong>)</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">unsigned</span> <span class="pre">int</span> <span class="pre">/</span> <span class="pre">int</span></code> <strong>number</strong></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unsigned</span> <span class="pre">int</span> <span class="pre">/</span> <span class="pre">int</span></code> <strong>tic</strong></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::vector&lt;float&gt;</span> <span class="pre">/</span> <span class="pre">numpy.double[]</span></code> <strong>gameVariables / game_variables</strong></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ImageBufferPtr</span> <span class="pre">/</span> <span class="pre">numpy.uint8[]</span></code>  <strong>screenBuffer / screen_buffer</strong></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ImageBufferPtr</span> <span class="pre">/</span> <span class="pre">numpy.uint8[]</span></code>  <strong>depthBuffer / depth_buffer</strong></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ImageBufferPtr</span> <span class="pre">/</span> <span class="pre">numpy.uint8[]</span></code>  <strong>labelsBuffer / labels_buffer</strong></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ImageBufferPtr</span> <span class="pre">/</span> <span class="pre">numpy.uint8[]</span></code>  <strong>automapBuffer / automap_buffer</strong></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">AudioBufferPtr</span> <span class="pre">/</span> <span class="pre">numpy.int16[]</span></code> <strong>audioBuffer / audio_buffer</strong></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::vector&lt;Label&gt;</span> <span class="pre">/</span> <span class="pre">list</span></code>  <strong>labels</strong></p></li>
+</ul>
+<p><strong>number</strong> - number of the state in the episode.
+<strong>tic</strong> - ingame time, 1 tic is 1/35 of second in the game world. Added in 1.1.1.</p>
+<p>See also:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../doomGame/#getstate"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">DoomGame:</span> <span class="pre">getState</span></code></span></a>,</p></li>
+<li><p><a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/tree/master/examples/python/basic.py">examples/python/basic.py</a>,</p></li>
+<li><p><a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/tree/master/examples/python/buffers.py">examples/python/buffers.py</a>.</p></li>
+<li><p><a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/tree/master/examples/python/audio_buffer.py">examples/python/audio_buffer.py</a>.</p></li>
+</ul>
+<section id="types-used-only-in-c">
+<h3>Types used only in C++<a class="headerlink" href="#types-used-only-in-c" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Buffer</span> <span class="pre">(std::vector&lt;uint8_t&gt;)</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ImageBufferPtr</span> <span class="pre">(std::shared_ptr&lt;Buffer&gt;)</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">GameStatePtr</span> <span class="pre">(std::shared_ptr&lt;GameState&gt;)</span></code></p></li>
 </ul>
 </section>
+</section>
 <section id="structures">
 <h2>Structures<a class="headerlink" href="#structures" title="Permalink to this heading">#</a></h2>
-<hr class="docutils" />
 <section id="label">
-<h3><a name="label"></a> <code class="docutils literal notranslate"><span class="pre">Label</span></code><a class="headerlink" href="#label" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">Label</span></code><a class="headerlink" href="#label" title="Permalink to this heading">#</a></h3>
 <p>(<code class="docutils literal notranslate"><span class="pre">C++</span> <span class="pre">type</span> <span class="pre">/</span> <span class="pre">Python</span> <span class="pre">type</span></code> <strong>name</strong>)</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">unsigned</span> <span class="pre">int</span> <span class="pre">/</span> <span class="pre">int</span></code> <strong>objectId / object_id</strong></p></li>
@@ -340,10 +378,15 @@
 <p><strong>objectName / object_name</strong> - ingame object name, many different objects can have the same name (e.g. Medikit, Clip, Zombie).</p>
 <p><strong>value</strong> - value that represents this particular object in <strong>labelsBuffer</strong>.</p>
 <p><strong>x</strong>, <strong>y</strong>, <strong>width</strong>, <strong>height</strong> - describes bounding box of this particular object in <strong>labelsBuffer</strong>. Added in 1.1.5.</p>
+<p>See also:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../doomGame/#setlabelsbufferenabled"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">DoomGame:</span> <span class="pre">setLabelsBufferEnabled</span></code></span></a>,</p></li>
+<li><p><a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/tree/master/examples/python/labels_buffer.py">examples/python/objects_and_sectors.py</a>.</p></li>
+</ul>
 </section>
 <hr class="docutils" />
 <section id="object">
-<h3><a name="object"></a> <code class="docutils literal notranslate"><span class="pre">Object</span></code><a class="headerlink" href="#object" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">Object</span></code><a class="headerlink" href="#object" title="Permalink to this heading">#</a></h3>
 <p>(<code class="docutils literal notranslate"><span class="pre">C++</span> <span class="pre">type</span> <span class="pre">/</span> <span class="pre">Python</span> <span class="pre">type</span></code> <strong>name</strong>)</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">unsigned</span> <span class="pre">int</span> <span class="pre">/</span> <span class="pre">int</span></code> <strong>id</strong></p></li>
@@ -364,13 +407,13 @@
 Added in 1.1.8.</p>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../doomGame/#setSectorsInfoEnabled"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">DoomGame:</span> <span class="pre">setObjectsInfoEnabled</span></code></span></a>,</p></li>
-<li><p><a class="reference external" href="https://github.com/mwydmuch/ViZDoom/tree/master/examples/python/objects_and_sectors.py">examples/python/objects_and_sectors.py</a>.</p></li>
+<li><p><a class="reference internal" href="../doomGame/#setsectorsinfoenabled"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">DoomGame:</span> <span class="pre">setObjectsInfoEnabled</span></code></span></a>,</p></li>
+<li><p><a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/tree/master/examples/python/objects_and_sectors.py">examples/python/objects_and_sectors.py</a>.</p></li>
 </ul>
 </section>
 <hr class="docutils" />
 <section id="line">
-<h3><a name="line"></a> <code class="docutils literal notranslate"><span class="pre">Line</span></code><a class="headerlink" href="#line" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">Line</span></code><a class="headerlink" href="#line" title="Permalink to this heading">#</a></h3>
 <p>(<code class="docutils literal notranslate"><span class="pre">C++</span> <span class="pre">type</span> <span class="pre">/</span> <span class="pre">Python</span> <span class="pre">type</span></code> <strong>name</strong>)</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">double</span> <span class="pre">/</span> <span class="pre">float</span></code> <strong>x1</strong></p></li>
@@ -386,12 +429,12 @@ Added in 1.1.8.</p>
 Added in 1.1.8.</p>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/mwydmuch/ViZDoom/tree/master/examples/python/objects_and_sectors.py">examples/python/objects_and_sectors.py</a>.</p></li>
+<li><p><a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/tree/master/examples/python/objects_and_sectors.py">examples/python/objects_and_sectors.py</a>.</p></li>
 </ul>
 </section>
 <hr class="docutils" />
 <section id="sector">
-<h3><a name="sector"></a> <code class="docutils literal notranslate"><span class="pre">Sector</span></code><a class="headerlink" href="#sector" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">Sector</span></code><a class="headerlink" href="#sector" title="Permalink to this heading">#</a></h3>
 <p>(<code class="docutils literal notranslate"><span class="pre">C++</span> <span class="pre">type</span> <span class="pre">/</span> <span class="pre">Python</span> <span class="pre">type</span></code> <strong>name</strong>)</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">double</span> <span class="pre">/</span> <span class="pre">float</span></code> <strong>floorHeight / floor_height</strong></p></li>
@@ -405,37 +448,15 @@ Added in 1.1.8.</p>
 Added in 1.1.8.</p>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../doomGame/#setSectorsInfoEnabled"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">DoomGame:</span> <span class="pre">setSectorsInfoEnabled</span></code></span></a>,</p></li>
-<li><p><a class="reference external" href="https://github.com/mwydmuch/ViZDoom/tree/master/examples/python/objects_and_sectors.py">examples/python/objects_and_sectors.py</a>.</p></li>
+<li><p><a class="reference internal" href="../doomGame/#setsectorsinfoenabled"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">DoomGame:</span> <span class="pre">setSectorsInfoEnabled</span></code></span></a>,</p></li>
+<li><p><a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/tree/master/examples/python/objects_and_sectors.py">examples/python/objects_and_sectors.py</a>.</p></li>
 </ul>
 </section>
-<hr class="docutils" />
-<section id="gamestate">
-<h3><a name="gamestate"></a> <code class="docutils literal notranslate"><span class="pre">GameState</span></code><a class="headerlink" href="#gamestate" title="Permalink to this heading">#</a></h3>
-<p>(<code class="docutils literal notranslate"><span class="pre">C++</span> <span class="pre">type</span> <span class="pre">/</span> <span class="pre">Python</span> <span class="pre">type</span></code> <strong>name</strong>)</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">unsigned</span> <span class="pre">int</span> <span class="pre">/</span> <span class="pre">int</span></code> <strong>number</strong></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">unsigned</span> <span class="pre">int</span> <span class="pre">/</span> <span class="pre">int</span></code> <strong>tic</strong></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">std::vector&lt;float&gt;</span> <span class="pre">/</span> <span class="pre">numpy.double[]</span></code> <strong>gameVariables / game_variables</strong></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ImageBufferPtr</span> <span class="pre">/</span> <span class="pre">numpy.uint8[]</span></code>  <strong>screenBuffer / screen_buffer</strong></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ImageBufferPtr</span> <span class="pre">/</span> <span class="pre">numpy.uint8[]</span></code>  <strong>depthBuffer / depth_buffer</strong></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ImageBufferPtr</span> <span class="pre">/</span> <span class="pre">numpy.uint8[]</span></code>  <strong>labelsBuffer / labels_buffer</strong></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ImageBufferPtr</span> <span class="pre">/</span> <span class="pre">numpy.uint8[]</span></code>  <strong>automapBuffer / automap_buffer</strong></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">AudioBufferPtr</span> <span class="pre">/</span> <span class="pre">numpy.int16[]</span></code> <strong>audioBuffer / audio_buffer</strong></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">std::vector&lt;Label&gt;</span> <span class="pre">/</span> <span class="pre">list</span></code>  <strong>labels</strong></p></li>
-</ul>
-<p><strong>number</strong> - number of the state in the episode.
-<strong>tic</strong> - ingame time, 1 tic is 1/35 of second in the game world. Added in 1.1.1.</p>
-<p>See also:</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="../doomGame/#getState"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">DoomGame:</span> <span class="pre">getState</span></code></span></a>,</p></li>
-<li><p><a class="reference external" href="https://github.com/mwydmuch/ViZDoom/tree/master/examples/python/basic.py">examples/python/basic.py</a>,</p></li>
-<li><p><a class="reference external" href="https://github.com/mwydmuch/ViZDoom/tree/master/examples/python/buffers.py">examples/python/buffers.py</a>.</p></li>
-<li><p><a class="reference external" href="https://github.com/mwydmuch/ViZDoom/tree/master/examples/python/audio_buffer.py">examples/python/audio_buffer.py</a>.</p></li>
-</ul>
+</section>
 <hr class="docutils" />
 <section id="serverstate">
-<h4><a name="serverstate"></a> <code class="docutils literal notranslate"><span class="pre">ServerState</span></code><a class="headerlink" href="#serverstate" title="Permalink to this heading">#</a></h4>
+<h2><code class="docutils literal notranslate"><span class="pre">ServerState</span></code><a class="headerlink" href="#serverstate" title="Permalink to this heading">#</a></h2>
+<p>ServerState is the main object returned by <a class="reference internal" href="../doomGame/#getserverstate"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">DoomGame:</span> <span class="pre">getServerState</span></code></span></a> method, and it purpose is to get more information about the state of the multi-player game.</p>
 <p>(<code class="docutils literal notranslate"><span class="pre">C++</span> <span class="pre">type</span> <span class="pre">/</span> <span class="pre">Python</span> <span class="pre">type</span></code> <strong>name</strong>)</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">unsigned</span> <span class="pre">int</span> <span class="pre">/</span> <span class="pre">int</span></code> <strong>tic</strong></p></li>
@@ -449,282 +470,10 @@ Added in 1.1.8.</p>
 </ul>
 <p>Right now <code class="docutils literal notranslate"><span class="pre">ServerInfo</span></code> is only available to C++ and Python.
 Added in 1.1.6.</p>
-</section>
-</section>
-</section>
-<section id="enums">
-<h2><a name="enums"></a> Enums<a class="headerlink" href="#enums" title="Permalink to this heading">#</a></h2>
-<hr class="docutils" />
-<section id="mode">
-<h3><a name="mode"></a> <code class="docutils literal notranslate"><span class="pre">Mode</span></code><a class="headerlink" href="#mode" title="Permalink to this heading">#</a></h3>
-<p>Enum type that defines all supported modes.</p>
-<ul class="simple">
-<li><p><strong>PLAYER</strong> - synchronous player mode</p></li>
-<li><p><strong>SPECTATOR</strong> - synchronous spectator mode</p></li>
-<li><p><strong>ASYNC_PLAYER</strong> - asynchronous player mode</p></li>
-<li><p><strong>ASYNC_SPECTATOR</strong> - asynchronous spectator mode</p></li>
-</ul>
-<p>In <strong>PLAYER</strong> and <strong>ASYNC_PLAYER</strong> modes, the agent controls ingame character.</p>
-<p>In <strong>SPECTATOR</strong> and <strong>ASYNC_SPECTATOR</strong> modes, ingame character should be controlled by the human and the agent gets information about the human action.</p>
-<p>In <strong>PLAYER</strong> and <strong>SPECTATOR</strong> modes, the game waits for agent action or permission to continue.</p>
-<p>In <strong>ASYNC</strong> modes the game progress with constant speed (default 35 tics per second, this can be set) without waiting for the agent actions.</p>
-<p>All modes can be used in singleplayer and multiplayer.</p>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../doomGame/#getMode"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">DoomGame:</span> <span class="pre">getMode</span></code></span></a>,</p></li>
-<li><p><a class="reference internal" href="../doomGame/#setMode"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">DoomGame:</span> <span class="pre">setMode</span></code></span></a>,</p></li>
-<li><p><a class="reference internal" href="../doomGame/#getTicrate"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">DoomGame:</span> <span class="pre">getTicrate</span></code></span></a>,</p></li>
-<li><p><a class="reference internal" href="../doomGame/#setTicrate"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">DoomGame:</span> <span class="pre">setTicrate</span></code></span></a>.</p></li>
+<li><p><a class="reference internal" href="../doomGame/#getserverstate"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">DoomGame:</span> <span class="pre">getServerState</span></code></span></a>,</p></li>
 </ul>
-</section>
-<hr class="docutils" />
-<section id="screenformat">
-<h3><a name="screenformat"></a> <code class="docutils literal notranslate"><span class="pre">ScreenFormat</span></code><a class="headerlink" href="#screenformat" title="Permalink to this heading">#</a></h3>
-<p>Enum type that defines all supported <strong>screenBuffer</strong> and <strong>automapBuffer</strong> formats.</p>
-<ul class="simple">
-<li><p><strong>CRCGCB</strong>    - 3 channels of 8-bit values in RGB order</p></li>
-<li><p><strong>RGB24</strong>     - channel of RGB values stored in 24 bits, where R value is stored in the oldest 8 bits</p></li>
-<li><p><strong>RGBA32</strong>    - channel of RGBA values stored in 32 bits, where R value is stored in the oldest 8 bits</p></li>
-<li><p><strong>ARGB32</strong>    - channel of ARGB values stored in 32 bits, where A value is stored in the oldest 8 bits</p></li>
-<li><p><strong>CBCGCR</strong>    - 3 channels of 8-bit values in BGR order</p></li>
-<li><p><strong>BGR24</strong>     - channel of BGR values stored in 24 bits, where B value is stored in the oldest 8 bits</p></li>
-<li><p><strong>BGRA32</strong>    - channel of BGRA values stored in 32 bits, where B value is stored in the oldest 8 bits</p></li>
-<li><p><strong>ABGR32</strong>    - channel of ABGR values stored in 32 bits, where A value is stored in the oldest 8 bits</p></li>
-<li><p><strong>GRAY8</strong>     - 8-bit gray channel</p></li>
-<li><p><strong>DOOM_256_COLORS8</strong> - 8-bit channel with Doom palette values</p></li>
-</ul>
-<p>In <strong>CRCGCB</strong> and <strong>CBCGCR</strong> format <strong>screenBuffer</strong> and <strong>automapBuffer</strong> store all red 8-bit values then all green values and then all blue values, each channel is considered separately. As matrices they have [3, y, x] shape.</p>
-<p>In <strong>RGB24</strong> and <strong>BGR24</strong> format <strong>screenBuffer</strong> and <strong>automapBuffer</strong> store 24 bit RGB triples. As matrices they have [y, x, 3] shape.</p>
-<p>In <strong>RGBA32</strong>, <strong>ARGB32</strong>, <strong>BGRA32</strong> and <strong>ABGR32</strong> format <strong>screenBuffer</strong> and <strong>automapBuffer</strong> store 32 bit sets of RBG + alpha values. As matrices they have [y, x, 4] shape.</p>
-<p>In <strong>GRAY8</strong> and <strong>DOOM_256_COLORS8</strong> format <strong>screenBuffer</strong> and <strong>automapBuffer</strong> store single 8 bit values. As matrices they have [y, x] shape.</p>
-<p><strong>depthBuffer</strong> and <strong>lablesBuffer</strong> always store single 8-bit values, so they always have [y, x] shape.</p>
-<p>See also:</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="../doomGame/#getScreenFormat"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">DoomGame:</span> <span class="pre">getScreenFormat</span></code></span></a>,</p></li>
-<li><p><a class="reference internal" href="../doomGame/#setScreenFormat"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">DoomGame:</span> <span class="pre">setScreenFormat</span></code></span></a>,</p></li>
-<li><p><a class="reference external" href="https://github.com/mwydmuch/ViZDoom/tree/master/examples/python/buffers.py">examples/python/buffers.py</a>.</p></li>
-</ul>
-</section>
-<hr class="docutils" />
-<section id="screenresolution">
-<h3><a name="screenresolution"></a> <code class="docutils literal notranslate"><span class="pre">ScreenResolution</span></code><a class="headerlink" href="#screenresolution" title="Permalink to this heading">#</a></h3>
-<p>Enum type that defines all supported resolutions - shapes of <strong>screenBuffer</strong>, <strong>depthBuffer</strong>, <strong>labelsBuffer</strong> and <strong>automapBuffer</strong> in <strong>State</strong>.</p>
-<ul class="simple">
-<li><p><strong>RES_160X120</strong> (4:3)</p></li>
-<li><p><strong>RES_200X125</strong> (16:10)</p></li>
-<li><p><strong>RES_200X150</strong> (4:3)</p></li>
-<li><p><strong>RES_256X144</strong> (16:9)</p></li>
-<li><p><strong>RES_256X160</strong> (16:10)</p></li>
-<li><p><strong>RES_256X192</strong> (4:3)</p></li>
-<li><p><strong>RES_320X180</strong> (16:9)</p></li>
-<li><p><strong>RES_320X200</strong> (16:10)</p></li>
-<li><p><strong>RES_320X240</strong> (4:3)</p></li>
-<li><p><strong>RES_320X256</strong> (5:4)</p></li>
-<li><p><strong>RES_400X225</strong> (16:9)</p></li>
-<li><p><strong>RES_400X250</strong> (16:10)</p></li>
-<li><p><strong>RES_400X300</strong> (4:3)</p></li>
-<li><p><strong>RES_512X288</strong> (16:9)</p></li>
-<li><p><strong>RES_512X320</strong> (16:10)</p></li>
-<li><p><strong>RES_512X384</strong> (4:3)</p></li>
-<li><p><strong>RES_640X360</strong> (16:9)</p></li>
-<li><p><strong>RES_640X400</strong> (16:10)</p></li>
-<li><p><strong>RES_640X480</strong> (4:3)</p></li>
-<li><p><strong>RES_800X450</strong> (16:9)</p></li>
-<li><p><strong>RES_800X500</strong> (16:10)</p></li>
-<li><p><strong>RES_800X600</strong> (4:3)</p></li>
-<li><p><strong>RES_1024X576</strong> (16:9)</p></li>
-<li><p><strong>RES_1024X640</strong> (16:10)</p></li>
-<li><p><strong>RES_1024X768</strong> (4:3)</p></li>
-<li><p><strong>RES_1280X720</strong> (16:9)</p></li>
-<li><p><strong>RES_1280X800</strong> (16:10)</p></li>
-<li><p><strong>RES_1280X960</strong> (4:3)</p></li>
-<li><p><strong>RES_1280X1024</strong> (5:4)</p></li>
-<li><p><strong>RES_1400X787</strong> (16:9)</p></li>
-<li><p><strong>RES_1400X875</strong> (16:10)</p></li>
-<li><p><strong>RES_1400X1050</strong> (4:3)</p></li>
-<li><p><strong>RES_1600X900</strong> (16:9)</p></li>
-<li><p><strong>RES_1600X1000</strong> (16:10)</p></li>
-<li><p><strong>RES_1600X1200</strong> (4:3)</p></li>
-<li><p><strong>RES_1920X1080</strong> (16:9)</p></li>
-</ul>
-<p>See also:</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="../doomGame/#setScreenResolution"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">DoomGame:</span> <span class="pre">setScreenResolution</span></code></span></a>,</p></li>
-<li><p><a class="reference internal" href="../doomGame/#getScreenWidth"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">DoomGame:</span> <span class="pre">getScreenWidth</span></code></span></a>,</p></li>
-<li><p><a class="reference internal" href="../doomGame/#getScreenHeight"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">DoomGame:</span> <span class="pre">getScreenHeight</span></code></span></a>.</p></li>
-</ul>
-</section>
-<hr class="docutils" />
-<section id="automapmode">
-<h3><a name="automapmode"></a> <code class="docutils literal notranslate"><span class="pre">AutomapMode</span></code><a class="headerlink" href="#automapmode" title="Permalink to this heading">#</a></h3>
-<p>Enum type that defines all <strong>automapBuffer</strong> modes.</p>
-<ul class="simple">
-<li><p><strong>NORMAL</strong>    - Only level architecture the player has seen is shown.</p></li>
-<li><p><strong>WHOLE</strong>     - All architecture is shown, regardless of whether or not the player has seen it.</p></li>
-<li><p><strong>OBJECTS</strong>   - In addition to the previous, shows all things in the map as arrows pointing in the direction they are facing.</p></li>
-<li><p><strong>OBJECTS_WITH_SIZE</strong> - In addition to the previous, all things are wrapped in a box showing their size.</p></li>
-</ul>
-<p>See also:</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="../doomGame/#setAutomapMode"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">DoomGame:</span> <span class="pre">setAutomapMode</span></code></span></a>,</p></li>
-<li><p><a class="reference external" href="https://github.com/mwydmuch/ViZDoom/tree/master/examples/python/buffers.py">examples/python/buffers.py</a>.</p></li>
-</ul>
-</section>
-<hr class="docutils" />
-<section id="gamevariable">
-<h3><a name="gamevariable"></a> <code class="docutils literal notranslate"><span class="pre">GameVariable</span></code><a class="headerlink" href="#gamevariable" title="Permalink to this heading">#</a></h3>
-<p>Enum type that defines all variables that can be obtained from the game.</p>
-<section id="defined-variables">
-<h4>Defined variables<a class="headerlink" href="#defined-variables" title="Permalink to this heading">#</a></h4>
-<ul class="simple">
-<li><p><strong>KILLCOUNT</strong>     - Counts the number of monsters killed during the current episode. ~Killing other players/bots do not count towards this.~ From 1.1.5 killing other players/bots counts towards this.</p></li>
-<li><p><strong>ITEMCOUNT</strong>     - Counts the number of picked up items during the current episode.</p></li>
-<li><p><strong>SECRETCOUNT</strong>   - Counts the number of secret location/objects discovered during the current episode.</p></li>
-<li><p><strong>FRAGCOUNT</strong>     - Counts the number of players/bots killed, minus the number of committed suicides. Useful only in multiplayer mode.</p></li>
-<li><p><strong>DEATHCOUNT</strong>    - Counts the number of players deaths during the current episode. Useful only in multiplayer mode.</p></li>
-<li><p><strong>HITCOUNT</strong>      - Counts number of hit monsters/players/bots during the current episode. Added in 1.1.5.</p></li>
-<li><p><strong>HITS_TAKEN</strong>    - Counts number of hits taken by the player during the current episode. Added in 1.1.5.</p></li>
-<li><p><strong>DAMAGECOUNT</strong>   - Counts number of damage dealt to monsters/players/bots during the current episode. Added in 1.1.5.</p></li>
-<li><p><strong>DAMAGE_TAKEN</strong>  - Counts number of damage taken by the player during the current episode. Added in 1.1.5.</p></li>
-<li><p><strong>HEALTH</strong>        - Can be higher then 100!</p></li>
-<li><p><strong>ARMOR</strong>         - Can be higher then 100!</p></li>
-<li><p><strong>DEAD</strong>          - True if the player is dead.</p></li>
-<li><p><strong>ON_GROUND</strong>     - True if the player is on the ground (not in the air).</p></li>
-<li><p><strong>ATTACK_READY</strong>  - True if the attack can be performed.</p></li>
-<li><p><strong>ALTATTACK_READY</strong>       - True if the altattack can be performed.</p></li>
-<li><p><strong>SELECTED_WEAPON</strong>       - Selected weapon’s number.</p></li>
-<li><p><strong>SELECTED_WEAPON_AMMO</strong>  - Ammo for selected weapon.</p></li>
-<li><p><strong>AMMO0</strong> - <strong>AMMO9</strong>     - Number of ammo for weapon in N slot.</p></li>
-<li><p><strong>WEAPON0</strong> - <strong>WEAPON9</strong> - Number of weapons in N slot.</p></li>
-<li><p><strong>POSITION_X</strong>            - Position of the player, not available if <code class="docutils literal notranslate"><span class="pre">viz_nocheat</span></code> is enabled.</p></li>
-<li><p><strong>POSITION_Y</strong></p></li>
-<li><p><strong>POSITION_Z</strong></p></li>
-<li><p><strong>ANGLE</strong>                 - Orientation of the player, not available if <code class="docutils literal notranslate"><span class="pre">viz_nocheat</span></code> is enabled.</p></li>
-<li><p><strong>PITCH</strong></p></li>
-<li><p><strong>ROLL</strong></p></li>
-<li><p><strong>VIEW_HEIGHT</strong>           - View high of the player, not available if <code class="docutils literal notranslate"><span class="pre">viz_nocheat</span></code> is enabled. Position of the camera in Z axis is equal to <strong>POSITION_Z</strong> + <strong>VIEW_HEIGHT</strong>. Added in 1.1.7.</p></li>
-<li><p><strong>VELOCITY_X</strong>            - Velocity of the player, not available if <code class="docutils literal notranslate"><span class="pre">viz_nocheat</span></code> is enabled.</p></li>
-<li><p><strong>VELOCITY_Y</strong></p></li>
-<li><p><strong>VELOCITY_Z</strong></p></li>
-<li><p><strong>CAMERA_POSITION_X</strong>     - Position of the camera, not available if <code class="docutils literal notranslate"><span class="pre">viz_nocheat</span></code> is enabled. Added in 1.1.7.</p></li>
-<li><p><strong>CAMERA_POSITION_Y</strong></p></li>
-<li><p><strong>CAMERA_POSITION_Z</strong></p></li>
-<li><p><strong>CAMERA_ANGLE</strong>          - Orientation of the camera, not available if <code class="docutils literal notranslate"><span class="pre">viz_nocheat</span></code> is enabled. Added in 1.1.7.</p></li>
-<li><p><strong>CAMERA_PITCH</strong></p></li>
-<li><p><strong>CAMERA_ROLL</strong></p></li>
-<li><p><strong>CAMERA_FOV</strong>            - Field of view in degrees, not available if <code class="docutils literal notranslate"><span class="pre">viz_nocheat</span></code> is enabled. Added in 1.1.7.</p></li>
-<li><p><strong>PLAYER_NUMBER</strong>         - Player’s number in multiplayer game.</p></li>
-<li><p><strong>PLAYER_COUNT</strong>          - Number of players in multiplayer game.</p></li>
-<li><p><strong>PLAYER1_FRAGCOUNT</strong> - <strong>PLAYER16_FRAGCOUNT</strong> - Number of N player’s frags</p></li>
-</ul>
-</section>
-<section id="user-acs-variables">
-<h4>User (ACS) variables<a class="headerlink" href="#user-acs-variables" title="Permalink to this heading">#</a></h4>
-<ul class="simple">
-<li><p><strong>USER1</strong> - <strong>USER60</strong></p></li>
-</ul>
-<p>ACS global int variables can be accessed as USER GameVariables.
-global int 0 is reserved for reward and is always threaded as Doom’s fixed point numeral.
-Other from 1 to 60 (global int 1-60) can be accessed as USER1 - USER60 GameVariables.</p>
-<p>See also:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="http://zdoom.org/wiki/ACS">ZDoom Wiki: ACS</a>,</p></li>
-<li><p><a class="reference internal" href="../doomGame/#getAvailableGameVariables"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">DoomGame:</span> <span class="pre">getAvailableGameVariables</span></code></span></a>,</p></li>
-<li><p><a class="reference internal" href="../doomGame/#setAvailableGameVariables"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">DoomGame:</span> <span class="pre">setAvailableGameVariables</span></code></span></a>,</p></li>
-<li><p><a class="reference internal" href="../doomGame/#addAvailableGameVariable"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">DoomGame:</span> <span class="pre">addAvailableGameVariable</span></code></span></a>,</p></li>
-<li><p><a class="reference internal" href="../doomGame/#getGameVariable"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">DoomGame:</span> <span class="pre">getGameVariable</span></code></span></a>,</p></li>
-<li><p><a class="reference internal" href="#Utilities.md#doomFixedToDouble"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Utilities:</span> <span class="pre">doomFixedToDouble</span></code></span></a>,</p></li>
-<li><p><a class="reference external" href="https://github.com/mwydmuch/ViZDoom/tree/master/examples/python/basic.py">examples/python/basic.py</a>,</p></li>
-<li><p><a class="reference external" href="https://github.com/mwydmuch/ViZDoom/tree/master/examples/python/shaping.py">examples/python/shaping.py</a>.</p></li>
-</ul>
-</section>
-</section>
-<hr class="docutils" />
-<section id="button">
-<h3><a name="button"></a> <code class="docutils literal notranslate"><span class="pre">Button</span></code><a class="headerlink" href="#button" title="Permalink to this heading">#</a></h3>
-<p>Enum type that defines all buttons that can be “pressed” by the agent.</p>
-<section id="binary-buttons">
-<h4><a name="binary-buttons"></a> Binary buttons<a class="headerlink" href="#binary-buttons" title="Permalink to this heading">#</a></h4>
-<p>Binary buttons have only 2 states “not pressed” if value 0 and “pressed” if value other then 0.</p>
-<ul class="simple">
-<li><p><strong>ATTACK</strong></p></li>
-<li><p><strong>USE</strong></p></li>
-<li><p><strong>JUMP</strong></p></li>
-<li><p><strong>CROUCH</strong></p></li>
-<li><p><strong>TURN180</strong></p></li>
-<li><p><strong>ALTATTACK</strong></p></li>
-<li><p><strong>RELOAD</strong></p></li>
-<li><p><strong>ZOOM</strong></p></li>
-<li><p><strong>SPEED</strong></p></li>
-<li><p><strong>STRAFE</strong></p></li>
-<li><p><strong>MOVE_RIGHT</strong></p></li>
-<li><p><strong>MOVE_LEFT</strong></p></li>
-<li><p><strong>MOVE_BACKWARD</strong></p></li>
-<li><p><strong>MOVE_FORWARD</strong></p></li>
-<li><p><strong>TURN_RIGHT</strong></p></li>
-<li><p><strong>TURN_LEFT</strong></p></li>
-<li><p><strong>LOOK_UP</strong></p></li>
-<li><p><strong>LOOK_DOWN</strong></p></li>
-<li><p><strong>MOVE_UP</strong></p></li>
-<li><p><strong>MOVE_DOWN</strong></p></li>
-<li><p><strong>LAND</strong></p></li>
-<li><p><strong>SELECT_WEAPON1</strong></p></li>
-<li><p><strong>SELECT_WEAPON2</strong></p></li>
-<li><p><strong>SELECT_WEAPON3</strong></p></li>
-<li><p><strong>SELECT_WEAPON4</strong></p></li>
-<li><p><strong>SELECT_WEAPON5</strong></p></li>
-<li><p><strong>SELECT_WEAPON6</strong></p></li>
-<li><p><strong>SELECT_WEAPON7</strong></p></li>
-<li><p><strong>SELECT_WEAPON8</strong></p></li>
-<li><p><strong>SELECT_WEAPON9</strong></p></li>
-<li><p><strong>SELECT_WEAPON0</strong></p></li>
-<li><p><strong>SELECT_NEXT_WEAPON</strong></p></li>
-<li><p><strong>SELECT_PREV_WEAPON</strong></p></li>
-<li><p><strong>DROP_SELECTED_WEAPON</strong></p></li>
-<li><p><strong>ACTIVATE_SELECTED_ITEM</strong></p></li>
-<li><p><strong>SELECT_NEXT_ITEM</strong></p></li>
-<li><p><strong>SELECT_PREV_ITEM</strong></p></li>
-<li><p><strong>DROP_SELECTED_ITEM</strong></p></li>
-</ul>
-</section>
-<section id="delta-buttons">
-<h4><a name="delta-buttons"></a> Delta buttons<a class="headerlink" href="#delta-buttons" title="Permalink to this heading">#</a></h4>
-<p>Buttons whose value defines the speed of movement.
-A positive value indicates movement in the first specified direction and a negative value in the second direction.
-For example: value 10 for MOVE_LEFT_RIGHT_DELTA means slow movement to the right and -100 means fast movement to the left.</p>
-<ul class="simple">
-<li><p><strong><code class="docutils literal notranslate"><span class="pre">LOOK_UP_DOWN_DELTA</span></code></strong></p></li>
-<li><p><strong>TURN_LEFT_RIGHT_DELTA</strong></p></li>
-<li><p><strong>MOVE_FORWARD_BACKWARD_DELTA</strong></p></li>
-<li><p><strong>MOVE_LEFT_RIGHT_DELTA</strong></p></li>
-<li><p><strong>MOVE_UP_DOWN_DELTA</strong></p></li>
-</ul>
-<p>In case of <strong>TURN_LEFT_RIGHT_DELTA</strong> and <strong>LOOK_UP_DOWN_DELTA</strong> values correspond to degrees.
-In case of <strong>MOVE_FORWARD_BACKWARD_DELTA</strong>, <strong>MOVE_LEFT_RIGHT_DELTA</strong>, <strong>MOVE_UP_DOWN_DELTA</strong> values correspond to Doom Map unit (see Doom Wiki if you want to know how it translates into real life units).</p>
-<p>See also:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://doomwiki.org/wiki/Map_unit">Doom Wiki: Map unit</a>,</p></li>
-<li><p><a class="reference internal" href="../doomGame/#getAvailableButtons"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">DoomGame:</span> <span class="pre">getAvailableButtons</span></code></span></a>,</p></li>
-<li><p><a class="reference internal" href="../doomGame/#setAvailableButtons"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">DoomGame:</span> <span class="pre">setAvailableButtons</span></code></span></a>,</p></li>
-<li><p><a class="reference internal" href="../doomGame/#addAvailableButton"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">DoomGame:</span> <span class="pre">addAvailableButton</span></code></span></a>,</p></li>
-<li><p><a class="reference internal" href="../doomGame/#setButtonMaxValue"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">DoomGame:</span> <span class="pre">setButtonMaxValue</span></code></span></a>,</p></li>
-<li><p><a class="reference internal" href="../doomGame/#getButtonMaxValue"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">DoomGame:</span> <span class="pre">getButtonMaxValue</span></code></span></a>,</p></li>
-<li><p><a class="reference external" href="https://github.com/mwydmuch/ViZDoom/tree/master/examples/python/basic.py">examples/python/basic.py</a>,</p></li>
-<li><p><a class="reference external" href="https://github.com/mwydmuch/ViZDoom/tree/master/examples/python/delta_buttons.py">examples/python/delta_buttons.py</a>,</p></li>
-<li><p><a class="reference external" href="https://github.com/mwydmuch/ViZDoom/issues/182">GitHub issue: Angle changes by executing certain commands</a>.</p></li>
-</ul>
-</section>
-</section>
-<section id="samplingrate">
-<h3><a name="sampling-rate"></a> <code class="docutils literal notranslate"><span class="pre">SamplingRate</span></code><a class="headerlink" href="#samplingrate" title="Permalink to this heading">#</a></h3>
-<p>Enum type that defines all supported sampling rates for <strong>audioBuffer</strong> in <strong>State</strong>.
-Added in 1.1.9.</p>
-<ul class="simple">
-<li><p><strong>SR_11025</strong></p></li>
-<li><p><strong>SR_22050</strong></p></li>
-<li><p><strong>SR_44100</strong></p></li>
-</ul>
-</section>
 </section>
 </section>
 
@@ -733,18 +482,18 @@ Added in 1.1.9.</p>
         <footer>
           
           <div class="related-pages">
-            <a class="next-page" href="../utils/">
+            <a class="next-page" href="../enums/">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Utilities</div>
+                <div class="title">Enums</div>
               </div>
               <svg class="furo-related-icon">
                 <use href="#svg-arrow-right"></use>
               </svg>
             </a>
-            <a class="prev-page" href="../exceptions/">
+            <a class="prev-page" href="../doomGame/">
               <svg class="furo-related-icon">
                 <use href="#svg-arrow-right"></use>
               </svg>
@@ -753,7 +502,7 @@ Added in 1.1.9.</p>
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Exceptions</div>
+                <div class="title">DoomGame</div>
                 
               </div>
             </a>
@@ -797,37 +546,19 @@ Added in 1.1.9.</p>
           <div class="toc-tree-container">
             <div class="toc-tree">
               <ul>
-<li><a class="reference internal" href="#">Types</a><ul>
-<li><a class="reference internal" href="#c-only">C++ only</a></li>
+<li><a class="reference internal" href="#">GameState</a><ul>
+<li><a class="reference internal" href="#id1"><code class="docutils literal notranslate"><span class="pre">GameState</span></code></a><ul>
+<li><a class="reference internal" href="#types-used-only-in-c">Types used only in C++</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#structures">Structures</a><ul>
-<li><a class="reference internal" href="#label"><a name="label"></a> <code class="docutils literal notranslate"><span class="pre">Label</span></code></a></li>
-<li><a class="reference internal" href="#object"><a name="object"></a> <code class="docutils literal notranslate"><span class="pre">Object</span></code></a></li>
-<li><a class="reference internal" href="#line"><a name="line"></a> <code class="docutils literal notranslate"><span class="pre">Line</span></code></a></li>
-<li><a class="reference internal" href="#sector"><a name="sector"></a> <code class="docutils literal notranslate"><span class="pre">Sector</span></code></a></li>
-<li><a class="reference internal" href="#gamestate"><a name="gamestate"></a> <code class="docutils literal notranslate"><span class="pre">GameState</span></code></a><ul>
-<li><a class="reference internal" href="#serverstate"><a name="serverstate"></a> <code class="docutils literal notranslate"><span class="pre">ServerState</span></code></a></li>
+<li><a class="reference internal" href="#label"><code class="docutils literal notranslate"><span class="pre">Label</span></code></a></li>
+<li><a class="reference internal" href="#object"><code class="docutils literal notranslate"><span class="pre">Object</span></code></a></li>
+<li><a class="reference internal" href="#line"><code class="docutils literal notranslate"><span class="pre">Line</span></code></a></li>
+<li><a class="reference internal" href="#sector"><code class="docutils literal notranslate"><span class="pre">Sector</span></code></a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a class="reference internal" href="#enums"><a name="enums"></a> Enums</a><ul>
-<li><a class="reference internal" href="#mode"><a name="mode"></a> <code class="docutils literal notranslate"><span class="pre">Mode</span></code></a></li>
-<li><a class="reference internal" href="#screenformat"><a name="screenformat"></a> <code class="docutils literal notranslate"><span class="pre">ScreenFormat</span></code></a></li>
-<li><a class="reference internal" href="#screenresolution"><a name="screenresolution"></a> <code class="docutils literal notranslate"><span class="pre">ScreenResolution</span></code></a></li>
-<li><a class="reference internal" href="#automapmode"><a name="automapmode"></a> <code class="docutils literal notranslate"><span class="pre">AutomapMode</span></code></a></li>
-<li><a class="reference internal" href="#gamevariable"><a name="gamevariable"></a> <code class="docutils literal notranslate"><span class="pre">GameVariable</span></code></a><ul>
-<li><a class="reference internal" href="#defined-variables">Defined variables</a></li>
-<li><a class="reference internal" href="#user-acs-variables">User (ACS) variables</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#button"><a name="button"></a> <code class="docutils literal notranslate"><span class="pre">Button</span></code></a><ul>
-<li><a class="reference internal" href="#binary-buttons"><a name="binary-buttons"></a> Binary buttons</a></li>
-<li><a class="reference internal" href="#delta-buttons"><a name="delta-buttons"></a> Delta buttons</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#samplingrate"><a name="sampling-rate"></a> <code class="docutils literal notranslate"><span class="pre">SamplingRate</span></code></a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#serverstate"><code class="docutils literal notranslate"><span class="pre">ServerState</span></code></a></li>
 </ul>
 </li>
 </ul>

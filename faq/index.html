@@ -7,15 +7,15 @@
     <meta property="og:title" content="ViZDoom Documentation" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="" />
-    <meta property="og:url" content="https://vizdoom.farama.org/faq/index.html" /><meta property="og:image" content="https://vizdoom.farama.org/_static/img/vizdoom-github.png" /><meta name="twitter:card" content="summary_large_image"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<link rel="index" title="Index" href="../genindex/" /><link rel="search" title="Search" href="../search/" /><link rel="next" title="Citation" href="../citation/" /><link rel="prev" title="Utilities" href="../api/utils/" />
+    <meta property="og:url" content="https://vizdoom.farama.org/faq/index.html" /><meta property="og:image" content="https://vizdoom.farama.org/_static/img/vizdoom-github.png" /><meta name="twitter:card" content="summary_large_image"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="../genindex/" /><link rel="search" title="Search" href="../search/" /><link rel="next" title="How to cite" href="../citation/" /><link rel="prev" title="Creating a custom enviroment" href="../environments/creatingCustom/" />
         <link rel="canonical" href="https://vizdoom.farama.org/faq/index.html" />
 
-    <link rel="shortcut icon" href="../_static/favicon.png"/><!-- Generated with Sphinx 6.2.1 and Furo 2022.12.07.dev1 -->
+    <link rel="shortcut icon" href="../_static/favicon.png"/><!-- Generated with Sphinx 7.0.1 and Furo 2023.05.20.dev1 -->
         <title>FAQ - ViZDoom Documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=cfd2cc3354364f303ef4a892d279bfffada5835d" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=6342a809aabeb35cfac296000cfa245808bc1d78" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=a022fd11c0d7e10ac71ac296890386cea7a2fa24" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=093e2efd5a2c7b46ab7c7157e45f5f05a1e0a463" />
     
     
 
@@ -224,22 +224,36 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../introduction/quickstart/">Quickstart</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../introduction/installation/">Installation and building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/pythonQuickstart/">Python quick start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/building/">Building from source</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/wrappers/">Wrapper</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">API</span></p>
+<p class="caption" role="heading"><span class="caption-text">Python API</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../api/doomGame/">DoomGame</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../api/configuration/">Configuration files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../api/exceptions/">Exceptions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../api/types/">Types</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../api/utils/">Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api_python/gymnasium/">Gymnasium</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api_python/doomGame/">DoomGame</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api_python/gameState/">GameState</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api_python/enums/">Enums</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api_python/utils/">Utils</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">C++ API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api_cpp/doomGame/">DoomGame</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api_cpp/gameState/">GameState</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api_cpp/enums/">Enums</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api_cpp/configurationFiles/">Configuration files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api_cpp/exceptions/">Exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api_cpp/utils/">Utilities</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Environments</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../environments/default/">Default scenarios/environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../environments/creatingCustom/">Creating a custom enviroment</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Others</span></p>
 <ul class="current">
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../citation/">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation/">How to cite</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Development</span></p>
 <ul>
@@ -306,8 +320,8 @@
 <h1>FAQ<a class="headerlink" href="#faq" title="Permalink to this heading">#</a></h1>
 <p>This file contains a list of questions that ViZDoom users may ask at some point.
 You can find more questions and answers by searching for issues with “question” tag
-(<a class="reference external" href="https://github.com/mwydmuch/ViZDoom/issues?utf8=%E2%9C%93&amp;amp;q=is%3Aissue+label%3Aquestion">is:issue label:question</a>).</p>
-<p>Did not find answer for your question? Post an <a class="reference external" href="https://github.com/mwydmuch/ViZDoom/issues">issue</a></p>
+(<a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/issues?utf8=%E2%9C%93&amp;amp;q=is%3Aissue+label%3Aquestion">is:issue label:question</a>).</p>
+<p>Did not find answer for your question? Post an <a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/issues">issue</a></p>
 <section id="how-to-use-original-doom-s-assets">
 <h2>How to use original Doom’s assets?<a class="headerlink" href="#how-to-use-original-doom-s-assets" title="Permalink to this heading">#</a></h2>
 <p>We cannot provide original Doom’s assets due to licensing issues, that is why ViZDoom uses <a class="reference external" href="https://freedoom.github.io">freedoom2.wad</a> as default assets.
@@ -324,45 +338,45 @@ We recommend using one of these two editors:</p>
 <p>You should select ZDoom as your Doom engine version and UDMF map format (Universal Doom Map Format),
 that supports the widest range of features.</p>
 <p><strong>Original issue and answer:</strong>
-https://github.com/mwydmuch/ViZDoom/issues/319</p>
+<a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/issues/319">https://github.com/Farama-Foundation/ViZDoom/issues/319</a></p>
 </section>
 <section id="how-to-stack-frames">
 <h2>How to stack frames?<a class="headerlink" href="#how-to-stack-frames" title="Permalink to this heading">#</a></h2>
 <p>ViZDoom does not automatically stacks frames for you.
-You have to manually store the states from <a class="reference internal" href="#DoomGame.md#getState"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">DoomGame:</span> <span class="pre">getState</span></code></span></a>. and build up stacked states for your agent.</p>
+You have to manually store the states from <a class="reference internal" href="#doomGame.md#getState"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">DoomGame:</span> <span class="pre">getState</span></code></span></a>. and build up stacked states for your agent.</p>
 <p><strong>Original issue and answer: (contains code an example)</strong>
-https://github.com/mwydmuch/ViZDoom/issues/296</p>
+<a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/issues/296">https://github.com/Farama-Foundation/ViZDoom/issues/296</a></p>
 </section>
 <section id="how-to-change-keyboard-binding-for-spectator-mode">
 <h2>How to change keyboard binding for Spectator Mode?<a class="headerlink" href="#how-to-change-keyboard-binding-for-spectator-mode" title="Permalink to this heading">#</a></h2>
 <p>When you launch an instance of vizdoom, it will create <code class="docutils literal notranslate"><span class="pre">_vizdoom.ini</span></code> in your working directory (if it does not exist yet).
 This file contains all the additional engine settings, including key bindings, that you can edit freely.</p>
-<p>You can also load .ini file from different location using <a class="reference internal" href="#DoomGame.md#setDoomConfigPath"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">DoomGame:</span> <span class="pre">setDoomConfigPath</span></code></span></a>.</p>
+<p>You can also load .ini file from different location using <a class="reference internal" href="#doomGame.md#setDoomConfigPath"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">DoomGame:</span> <span class="pre">setDoomConfigPath</span></code></span></a>.</p>
 <p><strong>Original issue and answer:</strong>
-https://github.com/mwydmuch/ViZDoom/issues/253</p>
+<a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/issues/253">https://github.com/Farama-Foundation/ViZDoom/issues/253</a></p>
 </section>
 <section id="is-it-possible-to-generate-maze-navigation-scenario-from-a-text-file-like-in-deepmind-lab">
 <h2>Is it possible to generate maze navigation scenario from a text file (like in DeepMind Lab)?<a class="headerlink" href="#is-it-possible-to-generate-maze-navigation-scenario-from-a-text-file-like-in-deepmind-lab" title="Permalink to this heading">#</a></h2>
 <p>Try <a class="reference external" href="https://github.com/agiantwhale/navdoom">NavDoom</a> or <a class="reference external" href="https://github.com/microsoft/MazeExplorer">MazeExplorer</a>.</p>
 <p><strong>Original issue and answer:</strong>
-https://github.com/mwydmuch/ViZDoom/issues/308</p>
+<a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/issues/308">https://github.com/Farama-Foundation/ViZDoom/issues/308</a></p>
 </section>
 <section id="how-to-control-game-speed-in-async-modes">
 <h2>How to control game speed in <code class="docutils literal notranslate"><span class="pre">ASYNC</span></code> modes?<a class="headerlink" href="#how-to-control-game-speed-in-async-modes" title="Permalink to this heading">#</a></h2>
-<p>See: <a class="reference internal" href="#DoomGame.md#setTicrate"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">DoomGame:</span> <span class="pre">setTicrate</span></code></span></a> and <a class="reference external" href="https://github.com/mwydmuch/ViZDoom/tree/master/examples/python/ticrate.py">examples/python/ticrate.py</a></p>
+<p>See: <a class="reference internal" href="#DoomGame.md#setTicrate"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">DoomGame:</span> <span class="pre">setTicrate</span></code></span></a> and <a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/tree/master/examples/python/ticrate.py">examples/python/ticrate.py</a></p>
 <p><strong>Original issue and answer:</strong>
-https://github.com/mwydmuch/ViZDoom/issues/209</p>
+<a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/issues/209">https://github.com/Farama-Foundation/ViZDoom/issues/209</a></p>
 </section>
 <section id="how-can-to-make-an-exact-90-degree-turn-in-one-action">
 <h2>How can to make an exact 90 degree turn in one action?<a class="headerlink" href="#how-can-to-make-an-exact-90-degree-turn-in-one-action" title="Permalink to this heading">#</a></h2>
-<p>See: <a class="reference external" href="https://github.com/mwydmuch/ViZDoom/tree/master/examples/python/delta_buttons.py">examples/python/delta_buttons.py</a></p>
+<p>See: <a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/tree/master/examples/python/delta_buttons.py">examples/python/delta_buttons.py</a></p>
 <p><strong>Original issue and answer:</strong>
-https://github.com/mwydmuch/ViZDoom/issues/279</p>
+<a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/issues/279">https://github.com/Farama-Foundation/ViZDoom/issues/279</a></p>
 <p>See also:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#Types.md#button"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Types:</span> <span class="pre">Button</span></code></span></a></p></li>
-<li><p><a class="reference external" href="https://github.com/mwydmuch/ViZDoom/tree/master/examples/cpp/DeltaDuttons.cpp">examples/python/DeltaDuttons.cpp</a></p></li>
-<li><p><a class="reference external" href="https://github.com/mwydmuch/ViZDoom/tree/master/examples/java/DeltaDuttons.java">examples/python/DeltaDuttons.java</a></p></li>
+<li><p><a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/tree/master/examples/cpp/DeltaDuttons.cpp">examples/python/DeltaDuttons.cpp</a></p></li>
+<li><p><a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/tree/master/examples/java/DeltaDuttons.java">examples/python/DeltaDuttons.java</a></p></li>
 </ul>
 </section>
 <section id="agent-does-not-fire-after-picking-up-ammo-or-weapon">
@@ -370,7 +384,7 @@ https://github.com/mwydmuch/ViZDoom/issues/279</p>
 <p>Some weapons have a <code class="docutils literal notranslate"><span class="pre">noautofire</span></code> flag for weapons to prevent using them by accident when picking up.
 Agent needs to release <code class="docutils literal notranslate"><span class="pre">ATTACK</span></code> button and then press it again to start firing after picking one of those weapons or ammo for them.</p>
 <p><strong>Original issue and answer:</strong>
-https://github.com/mwydmuch/ViZDoom/issues/289</p>
+https://github.com/Farama-Foundation/ViZDoom/issues/289</p>
 <p>See also:</p>
 <ul class="simple">
 <li><p>List of weapon flags: <a class="reference external" href="https://zdoom.org/wiki/Weapon_flags">https://zdoom.org/wiki/Weapon_flags</a></p></li>
@@ -382,7 +396,7 @@ https://github.com/mwydmuch/ViZDoom/issues/289</p>
 <p>CVARs implemented in ZDoom engine are very helpful in quickly modifying some aspects of the game.
 <code class="docutils literal notranslate"><span class="pre">game.add_game_args(&quot;+sv_unlimited_pickup</span> <span class="pre">1&quot;)</span></code> adding before init will allow picking up unlimited items.</p>
 <p><strong>Original issue and answer:</strong>
-https://github.com/mwydmuch/ViZDoom/issues/187</p>
+<a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/issues/187">https://github.com/Farama-Foundation/ViZDoom/issues/187</a></p>
 <p>See also:</p>
 <ul class="simple">
 <li><p>List of CVARs: <a class="reference external" href="https://zdoom.org/wiki/CVARs:Configuration">https://zdoom.org/wiki/CVARs:Configuration</a></p></li>
@@ -393,13 +407,13 @@ https://github.com/mwydmuch/ViZDoom/issues/187</p>
 <p>Make sure you can run ZDoom binary inside the ViZDoom package.</p>
 <p>If the game works, go to <code class="docutils literal notranslate"><span class="pre">Options</span> <span class="pre">-&gt;</span> <span class="pre">Set</span> <span class="pre">Video</span> <span class="pre">Mode</span></code> and see the list of available resolutions there. Try one of these resolutions viz ViZDoom.</p>
 <p><strong>Original issue and answer:</strong>
-https://github.com/mwydmuch/ViZDoom/issues/404</p>
+<a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/issues/404">https://github.com/Farama-Foundation/ViZDoom/issues/404</a></p>
 </section>
 <section id="issues-getting-vizdoom-instances-communicating-between-each-other-in-kubernetes">
 <h2>Issues getting ViZDoom instances communicating between each-other in Kubernetes<a class="headerlink" href="#issues-getting-vizdoom-instances-communicating-between-each-other-in-kubernetes" title="Permalink to this heading">#</a></h2>
 <p>Try setting <code class="docutils literal notranslate"><span class="pre">tty=True</span></code> in all containers running ViZDoom.</p>
 <p><strong>Original issue:</strong>
-https://github.com/mwydmuch/ViZDoom/issues/329</p>
+<a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/issues/329">https://github.com/Farama-Foundation/ViZDoom/issues/329</a></p>
 </section>
 <section id="reading-replays-invalid-actions-wrong-rewards">
 <h2>Reading replays (invalid actions, wrong rewards)<a class="headerlink" href="#reading-replays-invalid-actions-wrong-rewards" title="Permalink to this heading">#</a></h2>
@@ -407,8 +421,8 @@ https://github.com/mwydmuch/ViZDoom/issues/329</p>
 the read variables may be different from what they were during recording. There are tricks
 to fix this:</p>
 <ul class="simple">
-<li><p>Try adding a small amount of sleep between proceeding actions (Original issue: https://github.com/mwydmuch/ViZDoom/issues/354)</p></li>
-<li><p>Try using <code class="docutils literal notranslate"><span class="pre">GameMode.SPECTATOR</span></code> mode for reading replays. <strong>Note</strong> that processing of individual steps must be done fast, otherwise multiple steps get bundled up into one. (Original issue: https://github.com/mwydmuch/ViZDoom/issues/412)</p></li>
+<li><p>Try adding a small amount of sleep between proceeding actions (Original issue: https://github.com/Farama-Foundation/ViZDoom/issues/354)</p></li>
+<li><p>Try using <code class="docutils literal notranslate"><span class="pre">GameMode.SPECTATOR</span></code> mode for reading replays. <strong>Note</strong> that processing of individual steps must be done fast, otherwise multiple steps get bundled up into one. (Original issue: https://github.com/Farama-Foundation/ViZDoom/issues/412)</p></li>
 </ul>
 </section>
 <section id="having-multiple-agents-in-one-game-multiplayer-issues">
@@ -418,9 +432,9 @@ if you use <code class="docutils literal notranslate"><span class="pre">PLAYER</
 server proceeds by one frame). See discussion in Issues below for more information.</p>
 <p><strong>Original issues:</strong></p>
 <ul class="simple">
-<li><p>https://github.com/mwydmuch/ViZDoom/issues/228</p></li>
-<li><p>https://github.com/mwydmuch/ViZDoom/issues/391</p></li>
-<li><p>https://github.com/mwydmuch/ViZDoom/issues/417</p></li>
+<li><p><a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/issues/228">https://github.com/Farama-Foundation/ViZDoom/issues/228</a></p></li>
+<li><p><a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/issues/391">https://github.com/Farama-Foundation/ViZDoom/issues/391</a></p></li>
+<li><p><a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/issues/417">https://github.com/Farama-Foundation/ViZDoom/issues/417</a></p></li>
 </ul>
 </section>
 <section id="why-game-get-state-when-game-is-episode-finished-true">
@@ -428,8 +442,8 @@ server proceeds by one frame). See discussion in Issues below for more informati
 <p>After the end of the episode, ZDoom engine might change its state and exit the episode (map) resulting in some objects and variables being destroyed or reset. Because of that it’s difficult to provide a proper state after that. When we were originally designing ViZDoom we wanted to have a simple logic and we only update state after complete logic tic. Because of that we are not able to detect end of episode early before to save a proper state and decided to provide null/none value instead. We believe that it’s easy to provide dummy (e.g. filed with zeros) state if it’s needed by an algorithm.</p>
 <p><strong>Original issues:</strong></p>
 <ul class="simple">
-<li><p>https://github.com/mwydmuch/ViZDoom/issues/183</p></li>
-<li><p>https://github.com/mwydmuch/ViZDoom/issues/418</p></li>
+<li><p><a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/issues/183">https://github.com/Farama-Foundation/ViZDoom/issues/183</a></p></li>
+<li><p><a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/issues/418">https://github.com/Farama-Foundation/ViZDoom/issues/418</a></p></li>
 </ul>
 </section>
 <section id="i-am-trying-to-use-audio-sound-but-vizdoom-crashes-or-i-there-is-no-audio">
@@ -440,13 +454,11 @@ testing utility to ensure audio and audio buffers work for you.</p>
 with ViZDoom. You have several options you can try (one of these steps has worked so far on all tested machines):</p>
 <ul class="simple">
 <li><p>If ViZDoom crashes on init when you have sound enabled, try <code class="docutils literal notranslate"><span class="pre">doom_game.add_game_args(&quot;+snd_efx</span> <span class="pre">0&quot;)</span></code>. Note that this might remove some audio effects like reverberation.</p></li>
-<li><p>If you can run ViZDoom with sound enabled but there is no audio being played, try steps <a class="reference external" href="https://github.com/mwydmuch/ViZDoom/pull/486#issuecomment-889389185">here</a>.</p></li>
+<li><p>If you can run ViZDoom with sound enabled but there is no audio being played, try steps <a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/pull/486#issuecomment-889389185">here</a>.</p></li>
 <li><p>If that fails, try uninstalling OpenAL you have on your system and then repeating the above installation.</p></li>
 </ul>
-<p><strong>Original issue:</strong></p>
-<ul class="simple">
-<li><p>https://github.com/mwydmuch/ViZDoom/pull/486</p></li>
-</ul>
+<p><strong>Original issue:</strong>
+<a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/pull/486">https://github.com/Farama-Foundation/ViZDoom/pull/486</a></p>
 </section>
 <section id="how-to-display-vizdoom-s-window-when-running-it-on-wsl-windows-subsystem-for-linux">
 <h2>How to display ViZDoom’s window when running it on WSL (Windows Subsystem for Linux)<a class="headerlink" href="#how-to-display-vizdoom-s-window-when-running-it-on-wsl-windows-subsystem-for-linux" title="Permalink to this heading">#</a></h2>
@@ -458,14 +470,20 @@ with ViZDoom. You have several options you can try (one of these steps has worke
 <li><p>On Ubuntu WSL instance set: <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">DISPLAY=:0</span></code>.</p></li>
 <li><p>Now you can lunch your graphical application inside Ubuntu WSL including ViZDoom.</p></li>
 </ul>
-<p><strong>Original issue:</strong></p>
-<ul class="simple">
-<li><p>https://github.com/mwydmuch/ViZDoom/issues/491</p></li>
-</ul>
+<p><strong>Original issue:</strong>
+<a class="reference external" href="https://github.com/Farama-Foundation/ViZDoom/issues/491">https://github.com/Farama-Foundation/ViZDoom/issues/491</a></p>
 </section>
 <section id="what-is-a-difference-between-vizdoom-zdoom-and-gzdoom">
 <h2>What is a difference between ViZDoom, ZDoom and GZDoom<a class="headerlink" href="#what-is-a-difference-between-vizdoom-zdoom-and-gzdoom" title="Permalink to this heading">#</a></h2>
 <p>ViZDoom is based on the last version of ZDoom (2.8.1). ZDoom was discontinued in 2016, and the development switched to GZDoom, which provides a new 3D renderer implemented in OpenGL. ViZDoom, however, sticks to the original 2D software renderer, which is much faster for small resolutions than OpenGL. Because of that, ViZDoom modernized the ZDoom engine by adding support for Apple Silicon and ARM Linux and removing old unused parts of the code base (e.g., by removing Assembler parts).</p>
+<p>15.1K Views
+90%
+1 month ago
+Add to
+Jump to
+Report
+28
+3</p>
 </section>
 </section>
 
@@ -479,13 +497,13 @@ with ViZDoom. You have several options you can try (one of these steps has worke
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Citation</div>
+                <div class="title">How to cite</div>
               </div>
               <svg class="furo-related-icon">
                 <use href="#svg-arrow-right"></use>
               </svg>
             </a>
-            <a class="prev-page" href="../api/utils/">
+            <a class="prev-page" href="../environments/creatingCustom/">
               <svg class="furo-related-icon">
                 <use href="#svg-arrow-right"></use>
               </svg>
@@ -494,7 +512,7 @@ with ViZDoom. You have several options you can try (one of these steps has worke
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Utilities</div>
+                <div class="title">Creating a custom enviroment</div>
                 
               </div>
             </a>
